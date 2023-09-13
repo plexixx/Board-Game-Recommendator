@@ -1,0 +1,4606 @@
+<!DOCTYPE html>
+<html lang="en-US" ng-app="GeekApp" ng-cloak="">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" id="vp" name="viewport"/>
+  <script>
+   window.addEventListener( 'DOMContentLoaded',  function() {
+				var width = document.documentElement.clientWidth || window.innerWidth;
+				if (width < 960) {
+					var mvp = document.getElementById('vp');
+					// android debugging
+					mvp.setAttribute('content','width=960');
+				}
+			});
+  </script>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+  <title>
+   Browse Board Games | BoardGameGeek
+  </title>
+  <link href="https://cf.geekdo-static.com/icons/touch-icon180.png" rel="apple-touch-icon"/>
+  <link href="https://cf.geekdo-static.com/icons/favicon2.ico" rel="shortcut icon" type="image/ico"/>
+  <link href="https://cf.geekdo-static.com/icons/favicon2.ico" rel="icon" type="image/ico"/>
+  <link href="/game-opensearch.xml" rel="search" title="BGG Game Search" type="application/opensearchdescription+xml"/>
+  <meta content="BGG" name="apple-mobile-web-app-title"/>
+  <meta content="#2e2b47" name="theme-color"/>
+  <link href="https://api.geekdo.com" rel="preconnect"/>
+  <meta content="https://cf.geekdo-static.com/images/opengraph/bgg_opengraph.png" property="og:image">
+   <meta content="board game, boardgames, boardgame, board, games, game, hobby, boardgamegeek, geek, geekdo" name="keywords"/>
+   <script>
+    window.AdSlots = window.AdSlots || {
+	cmd: [],
+	disableScripts: ['gpt'],
+	renderOnFirstLoad: false,
+	divCheck: false
+};
+   </script>
+   <link href="https://cf.geekdo-static.com/static/geekui_master2_64ff680e4fd8e.css" rel="stylesheet" type="text/css"/>
+   <link href="https://cf.geekdo-static.com/static/css_master2_64ff68011bc29.css" rel="stylesheet" type="text/css"/>
+   <base href="/"/>
+   <script crossorigin="anonymous" src="https://kit.fontawesome.com/ece5b35462.js">
+   </script>
+   <script>
+    var GEEK = GEEK || {};
+	GEEK.adBlock = [];
+	GEEK.adConfig = {"blockleaderboard":null,"blockskyscraper":null,"noadsense":false,"blocksupportdrive":null};
+	GEEK.adSlots = {"dfp-leaderboard":{"name":"boardgame_leaderboard_728x90"},"dfp-skyscraper":{"name":"boardgame_skyscraper_160x600"},"dfp-medrect":{"name":"boardgame_rectangle_300x250"},"dfp-repeater":{"name":"boardgame_home_repeater"},"dfp-medrect-reserved-home":{"name":"boardgame_reserved_home_300x250"},"dfp-leaderboard-lg":{"name":"boardgame_home_hero"},"dfp-home-sidekick":{"name":"boardgame_home_repeater"},"dfp-inline-post":{"name":"boardgame_inline_post"}};
+	GEEK.legacyAds = [];
+	GEEK.bggStoreAds = [];
+	GEEK.googleTargets = null;
+	GEEK.userid = 0;
+	GEEK.domainname = 'boardgamegeek.com';
+	GEEK.domain = 'boardgame';
+	GEEK.geekitemPreload = {};
+	GEEK.geekitemSettings = null;
+	GEEK.geekitemModules = null;
+	GEEK.geekGlobalSettings = {"shutdown_file_ops":"1","shutdown_storeimage_ops":"0","shutdown_edit_avatar":"0","shutdown_file_upload":"0","shutdown_file_download":"0","shutdown_image_upload":"0"};
+	GEEK.geekimageSettings = null;
+	GEEK.legacy = 1;
+	GEEK.apiurlsPrefix = 'https://api.geekdo.com';
+
+	
+		
+		GEEK.apiurls = {
+		'root': '/api',
+		'amazon': '/api/amazon',
+		'files': '/api/files',
+		'geekitems': '/api/geekitems',
+		'images': '/api/images',
+		'threads': '/api/forums/threads',
+	 	'forums': '/api/forums',
+		'videos': '/api/videos',
+		'hotness': '/api/hotness',
+		'dynamicinfo': '/api/dynamicinfo',
+		'subtypeinfo': '/api/subtypeinfo',
+		'geekbay': '/api/geekbay',
+		'geekmarket': '/market/api/v1',
+	    'geekmarketapi': '/api/market',
+		'geeklists': '/api/geeklists',
+		'reviews': '/api/forumreviews',
+		'collections': '/api/collections',
+		'linkeditems': '/api/geekitem/linkeditems',
+		'subscriptions': '/api/subscriptions',
+	    'fans': '/api/fans',
+	    'geekpreviews': '/api/geekpreviews',
+	    'geekpreviewitems': '/api/geekpreviewitems',
+	   	'geekpreviewparentitems': '/api/geekpreviewparentitems',
+		'recs': '/api/geekitem/recs',
+	    'awards': '/api/geekawards',
+		'historicalrankgraph':  '/api/historicalrankgraph',
+		'blueprint_recipes': '/api/blueprints/recipes',
+		'affiliateads' : '/api/affiliateads',
+		'sleevesbycard': '/api/sleevesbycard',
+		'cardsetsbygame': '/api/cardsetsbygame',
+	};
+   </script>
+   <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-104725-1">
+   </script>
+   <script>
+    window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('consent', 'default', {
+		'ad_storage': 'denied',
+		'analytics_storage': 'denied',
+		'personalization_storage': 'denied',
+		'wait_for_update': 3000
+		 });
+	gtag('config', 'UA-104725-1', {
+		'cookie_domain': 'boardgamegeek.com',
+		'send_page_view': false
+	});
+   </script>
+   <script src="https://cf.geekdo-static.com/static/geekangular17_master2_64ff681bb0c17.js" type="text/javascript">
+   </script>
+   <script src="https://cf.geekdo-static.com/static/geekui_master2_64ff680e4fd8e.js" type="text/javascript">
+   </script>
+   <script src="https://cf.geekdo-static.com/static/js_master2_64ff6800ab9ac.js" type="text/javascript">
+   </script>
+   <script src="https://cf.geekdo-static.com/static/geekoutputtemplates_master2_64ff681c6920d.js" type="text/javascript">
+   </script>
+   <script src="https://cf.geekdo-static.com/static/geekuicommontemplates_master2_64ff681c7061a.js" type="text/javascript">
+   </script>
+   <script>
+    window.geekCookieConsent.gtagReady.then(function() {
+		gtag('event', 'page_view');
+	});
+   </script>
+   <!-- why this? -->
+   <meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+   <!-- Add to main?
+<link rel="apple-touch-icon" 	href="https://cf.geekdo-static.com/icons/appleicon.png" />
+<link rel="shortcut icon" 		href="https://cf.geekdo-static.com/icons/favicon.ico" type="image/ico" />
+<link rel="icon" 					href="https://cf.geekdo-static.com/icons/favicon.ico" type="image/ico" />
+<link rel="search" 				href="/game-opensearch.xml" type="application/opensearchdescription+xml" title="BGG Game Search" />
+-->
+   <!--this is used only for GeekMap -->
+   <!-- deal with adsense
+	<script type="text/javascript">
+		window.google_analytics_uacct = "UA-104725-1";
+		var googletag = googletag || { };
+		googletag.cmd = googletag.cmd || [];
+		( function() {
+			var gads = document.createElement('script');
+			gads.async = true;
+			gads.type  = 'text/javascript';
+			gads.src   = "//www.googletagservices.com/tag/js/gpt.js";
+			var node = document.getElementsByTagName('script')[0];
+			node.parentNode.insertBefore(gads, node);
+		} )();
+
+		adunits = [
+			{
+				name:    'boardgame_button_120x45',
+				size:    [ 120, 45 ],
+				target:  'dfp-button'
+			},
+			{
+				name:    'boardgame_leaderboard_728x90',
+				size:    [ 728, 90 ],
+				target:  'dfp-leaderboard'
+			},
+			{
+				name:    'boardgame_skyscraper_160x600',
+				size:    [ 160, 600 ],
+				target:  'dfp-skyscraper'
+			},
+			{
+				name:    'boardgame_rectangle_300x250',
+				size:    [ 300, 250 ],
+				target:  'dfp-medrect'
+			},
+			{
+				name:    'boardgame_rectangle_300x250',
+				size:    [ 300, 250 ],
+				target:  'dfp-medrect-reserved-home'
+			},
+			{
+				name:    'boardgame_button_120x90',
+				size:    [ 120, 90 ],
+				target:  'dfp-giftguide'
+			}
+		];
+
+		googletag.cmd.push(function() {
+			for( var i=0; i< adunits.length; i++ )
+			{
+				unit = adunits[i];
+				googletag.defineUnit('/1005854/ca-pub-7206761047394129/'+unit.name, unit.size, unit.target).
+				addService(googletag.pubads());
+			}
+
+			
+			googletag.pubads().setTargeting( "subdomain", "all" );
+			googletag.enableServices();
+		} );
+
+	</script>
+-->
+   <script>
+    function start() {
+		
+	}
+
+	function ondomready() {
+				Amazon_LoadAds();
+				
+		GEEK.addHandlers();
+		GEEK.recaptchaKey = '6Ldyr6EaAAAAAE0F2hYgtHHqbF6nKPTENAwo6SyU';
+	}
+
+	if( typeof window.addEvent === "function" ) {
+		window.addEvent('domready', function() {
+			ondomready();
+		} );
+	} else {
+		window.addEventListener( "DOMContentLoaded", function() {
+			ondomready();
+	} );
+	}
+	window.onload = start;
+   </script>
+  </meta>
+ </head>
+ <body class="domain-boardgame" ng-class="{ 'has-no-max-width' : layoutctrl.geekitemSettings.fluidlayout }" ng-controller="GeekOutput_LayoutCtrl as layoutctrl">
+  <div class="d-flex flex-column min-vh-100">
+   <div class="global-header-outer" click-out="navctrl.closeMobileMenu()" id="global-header-outer" ng-controller="NavCtrl as navctrl">
+    <geeknav-menu>
+    </geeknav-menu>
+   </div>
+   <main class="global-body flex-grow-1" id="mainbody" ng-class="{ 'has-overlay-sidebar': layoutctrl.showOverlaySidebar, 'has-hidden-fixed-sidebar': layoutctrl.localStorage.hideFixedSidebar }">
+    <a id="mainbodytarget" tabindex="-1">
+    </a>
+    <!-- Home King Ad -->
+    <div hide-ad-block="blockleaderboard">
+     <div class="advertisement-leaderboard">
+      <div class="center-block" ng-dfp-ad="dfp-leaderboard">
+      </div>
+     </div>
+    </div>
+    <div class="global-body-content-container container-fluid">
+     <geekoutput-sidebar deactivate-overlay-sidebar="layoutctrl.deactivateOverlaySidebar" show-overlay-sidebar="layoutctrl.showOverlaySidebar">
+     </geekoutput-sidebar>
+     <div class="global-body-content pending" ng-class="{'ready': layoutctrl.ready}">
+      <a id="maincontenttarget" tabindex="-1">
+      </a>
+      <div class="legacy">
+       <div class="yui-skin-sam" id="container">
+        <div id="maincontent" ng-non-bindable="">
+         <form action="" method="GET">
+          <div class="infobox">
+           <div class="fr">
+            <a href="/browse/boardgame/page/1" target="_self" title="first page">
+             [1]
+            </a>
+            <a href="/browse/boardgame/page/12" target="_self" title="previous page">
+             <b>
+              Prev «
+             </b>
+            </a>
+            <a href="/browse/boardgame/page/11" target="_self" title="page 11">
+             11
+            </a>
+            ,
+            <a href="/browse/boardgame/page/12" target="_self" title="page 12">
+             12
+            </a>
+            ,
+            <b>
+             13
+            </b>
+            ,
+            <a href="/browse/boardgame/page/14" target="_self" title="page 14">
+             14
+            </a>
+            ,
+            <a href="/browse/boardgame/page/15" target="_self" title="page 15">
+             15
+            </a>
+            <a href="/browse/boardgame/page/14" target="_self" title="next page">
+             <b>
+              Next »
+             </b>
+            </a>
+            <a href="/browse/boardgame/page/1479" target="_self" title="last page">
+             [1479]
+            </a>
+           </div>
+           <div class="fl">
+            <p class="m-0 text-muted">
+             We may earn a commission when you buy through our links.
+            </p>
+           </div>
+           <div class="clear">
+           </div>
+          </div>
+         </form>
+         <div id="collection_status" style="position:absolute; background:red; color:white;">
+         </div>
+         <div id="collection">
+          <div class="fl sf">
+           <span id="collection_viewlabel" style="display:none;">
+            | View:
+            <span id="collection_viewname">
+            </span>
+           </span>
+          </div>
+          <div class="sf" style="text-align:right; margin-bottom:5px;">
+          </div>
+          <div class="table-responsive">
+           <table cellpadding="0" cellspacing="1" class="collection_table" id="collectionitems" width="100%">
+            <tr>
+             <th class="collection_bggrating">
+              <a href="/browse/boardgame?sort=rank&amp;sortdir=desc">
+               Board Game Rank
+               <img alt="ascending sort" border="0" hspace="5" src="https://cf.geekdo-static.com/images/collection/arrow_up.gif"/>
+              </a>
+             </th>
+             <th class="collection_thumbnail">
+              <span class="sr-only">
+               Thumbnail image
+              </span>
+             </th>
+             <th class="collection_title">
+              <a href="/browse/boardgame?sort=title">
+               Title
+              </a>
+             </th>
+             <th class="collection_bggrating">
+              <a href="/browse/boardgame?sort=bggrating">
+               Geek Rating
+              </a>
+             </th>
+             <th class="collection_bggrating">
+              <a href="/browse/boardgame?sort=avgrating">
+               Avg Rating
+              </a>
+             </th>
+             <th class="collection_bggrating">
+              <a href="/browse/boardgame?sort=numvoters">
+               Num Voters
+              </a>
+             </th>
+             <th class="collection_shop">
+              Shop
+             </th>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1201">
+              </a>
+              1201
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/121410/steam-park">
+               <img alt="Board Game: Steam Park" src="https://cf.geekdo-images.com/HA0kPnNDm7O0gh0ukPcGcw__micro/img/NR5S6AZIw_dHak-pSxvsJUzHOv8=/fit-in/64x64/filters:strip_icc()/pic2656302.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname1">
+              <div id="status_objectname1">
+              </div>
+              <div id="results_objectname1" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/121410/steam-park">
+                Steam Park
+               </a>
+               <span class="smallerfont dull">
+                (2013)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Ready, set, roll! Create the best robot amusement park!
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.487
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.84
+             </td>
+             <td align="center" class="collection_bggrating">
+              5952
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_121410_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1202">
+              </a>
+              1202
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/137297/rise-augustus">
+               <img alt="Board Game: Rise of Augustus" src="https://cf.geekdo-images.com/DjlNoENOK3z7DO8rpNsofQ__micro/img/FHBgvc1XmuOwOD1__bfzxBWuI8c=/fit-in/64x64/filters:strip_icc()/pic3532649.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname2">
+              <div id="status_objectname2">
+              </div>
+              <div id="results_objectname2" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/137297/rise-augustus">
+                Rise of Augustus
+               </a>
+               <span class="smallerfont dull">
+                (2013)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Compete with other players to vie for the favor of the first Roman Emperor, Augustus.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.486
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.73
+             </td>
+             <td align="center" class="collection_bggrating">
+              8154
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_137297_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1203">
+              </a>
+              1203
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/226520/exit-game-sinister-mansion">
+               <img alt="Board Game: Exit: The Game – The Sinister Mansion" src="https://cf.geekdo-images.com/VngJ1B6if4rE9X9OS1N8CQ__micro/img/UbN-fzib5PrsMTS0AxXlTri9j44=/fit-in/64x64/filters:strip_icc()/pic3958803.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname3">
+              <div id="status_objectname3">
+              </div>
+              <div id="results_objectname3" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/226520/exit-game-sinister-mansion">
+                Exit: The Game – The Sinister Mansion
+               </a>
+               <span class="smallerfont dull">
+                (2018)
+               </span>
+              </div>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.483
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.28
+             </td>
+             <td align="center" class="collection_bggrating">
+              2436
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_226520_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1204">
+              </a>
+              1204
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/8045/princes-renaissance">
+               <img alt="Board Game: Princes of the Renaissance" src="https://cf.geekdo-images.com/U_bfH-9EjxL3o0qoabv4Dg__micro/img/Unt9syjg_hFUKGn60cT5w6gsSRc=/fit-in/64x64/filters:strip_icc()/pic3024485.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname4">
+              <div id="status_objectname4">
+              </div>
+              <div id="results_objectname4" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/8045/princes-renaissance">
+                Princes of the Renaissance
+               </a>
+               <span class="smallerfont dull">
+                (2003)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Choose the most profitable side in a series of conflicts to further your own glory!
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.483
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.32
+             </td>
+             <td align="center" class="collection_bggrating">
+              2302
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_8045_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1205">
+              </a>
+              1205
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/151007/pathfinder-adventure-card-game-skull-shackles-base">
+               <img alt="Board Game: Pathfinder Adventure Card Game: Skull &amp; Shackles – Base Set" src="https://cf.geekdo-images.com/Vi1DrBtoscEtxgf_SlyGeQ__micro/img/dC_upHDFbJnJyM0YvsSJOVAhYhk=/fit-in/64x64/filters:strip_icc()/pic2268287.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname5">
+              <div id="status_objectname5">
+              </div>
+              <div id="results_objectname5" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/151007/pathfinder-adventure-card-game-skull-shackles-base">
+                Pathfinder Adventure Card Game: Skull &amp; Shackles – Base Set
+               </a>
+               <span class="smallerfont dull">
+                (2014)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Level up your party in this card-and-dice fantasy campaign set on the high seas.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.483
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.30
+             </td>
+             <td align="center" class="collection_bggrating">
+              2641
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_151007_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1206">
+              </a>
+              1206
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/105/colossal-arena">
+               <img alt="Board Game: Colossal Arena" src="https://cf.geekdo-images.com/SsmaQGmmqdcBmyJDd041YQ__micro/img/gvpfmeP72see27GuCOFqJVux5qY=/fit-in/64x64/filters:strip_icc()/pic1680709.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname6">
+              <div id="status_objectname6">
+              </div>
+              <div id="results_objectname6" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/105/colossal-arena">
+                Colossal Arena
+               </a>
+               <span class="smallerfont dull">
+                (1997)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Place your bets. Power your beasts. Be the cagiest spectator in the arena.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.481
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.77
+             </td>
+             <td align="center" class="collection_bggrating">
+              7221
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_105_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1207">
+              </a>
+              1207
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/302098/chronicles-crime-1900">
+               <img alt="Board Game: Chronicles of Crime: 1900" src="https://cf.geekdo-images.com/bw-oJglzKtyINyubb8_4ew__micro/img/NQPwccgEo_5rmzTZs9-yjcGmhvA=/fit-in/64x64/filters:strip_icc()/pic6154871.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname7">
+              <div id="status_objectname7">
+              </div>
+              <div id="results_objectname7" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/302098/chronicles-crime-1900">
+                Chronicles of Crime: 1900
+               </a>
+               <span class="smallerfont dull">
+                (2021)
+               </span>
+              </div>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.481
+             </td>
+             <td align="center" class="collection_bggrating">
+              8.02
+             </td>
+             <td align="center" class="collection_bggrating">
+              1615
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_302098_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1208">
+              </a>
+              1208
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/13823/fairy-tale">
+               <img alt="Board Game: Fairy Tale" src="https://cf.geekdo-images.com/J86NZuK4hEnKWST-fH7LcA__micro/img/7vHZLV31oRWnay3pcxTvly9oNAA=/fit-in/64x64/filters:strip_icc()/pic2024738.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname8">
+              <div id="status_objectname8">
+              </div>
+              <div id="results_objectname8" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/13823/fairy-tale">
+                Fairy Tale
+               </a>
+               <span class="smallerfont dull">
+                (2004)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Fairy-themed card-drafting game with plenty of player interaction.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.481
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.71
+             </td>
+             <td align="center" class="collection_bggrating">
+              8851
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_13823_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1209">
+              </a>
+              1209
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/233961/claim">
+               <img alt="Board Game: Claim" src="https://cf.geekdo-images.com/XTnU0KdAC1l4WxxGr46F-g__micro/img/eAszAN1mdfBW-O7dd3w90D-OriY=/fit-in/64x64/filters:strip_icc()/pic3714302.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname9">
+              <div id="status_objectname9">
+              </div>
+              <div id="results_objectname9" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/233961/claim">
+                Claim
+               </a>
+               <span class="smallerfont dull">
+                (2017)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Recruit followers to control the kingdom by taking the right tricks.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.479
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.97
+             </td>
+             <td align="center" class="collection_bggrating">
+              4400
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_233961_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1210">
+              </a>
+              1210
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/1115/poker">
+               <img alt="Board Game: Poker" src="https://cf.geekdo-images.com/QhsvR9GY0LbTpj27fairWA__micro/img/3Q678GlEKr9khsd1KD4sZjypMFU=/fit-in/64x64/filters:strip_icc()/pic186610.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname10">
+              <div id="status_objectname10">
+              </div>
+              <div id="results_objectname10" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/1115/poker">
+                Poker
+               </a>
+               <span class="smallerfont dull">
+                (1810)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               You've got to know when to hold 'em; know when to fold 'em.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.479
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.72
+             </td>
+             <td align="center" class="collection_bggrating">
+              10646
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_1115_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1211">
+              </a>
+              1211
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/171879/kraftwagen">
+               <img alt="Board Game: Kraftwagen" src="https://cf.geekdo-images.com/kd_ysabx0f3Uk4wN0-NP7g__micro/img/7kj96toTqH7zSRNaX5NtEYdhmUE=/fit-in/64x64/filters:strip_icc()/pic3009417.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname11">
+              <div id="status_objectname11">
+              </div>
+              <div id="results_objectname11" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/171879/kraftwagen">
+                Kraftwagen
+               </a>
+               <span class="smallerfont dull">
+                (2015)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Build, sell, and race cars at the dawn of the automotive age.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.479
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.23
+             </td>
+             <td align="center" class="collection_bggrating">
+              2553
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_171879_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1212">
+              </a>
+              1212
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/17396/manoeuvre">
+               <img alt="Board Game: Manoeuvre" src="https://cf.geekdo-images.com/pqjIbe4kdIy4jbAzcbTX8A__micro/img/gPeWPk7sNLfYFvvRhbYH3bJkQ8U=/fit-in/64x64/filters:strip_icc()/pic309433.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname12">
+              <div id="status_objectname12">
+              </div>
+              <div id="results_objectname12" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/17396/manoeuvre">
+                Manoeuvre
+               </a>
+               <span class="smallerfont dull">
+                (2008)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Tactical napoleonic battles with chess-size 64 spaces game board.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.478
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.29
+             </td>
+             <td align="center" class="collection_bggrating">
+              2435
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_17396_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1213">
+              </a>
+              1213
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/527/gipf">
+               <img alt="Board Game: GIPF" src="https://cf.geekdo-images.com/ZqhrkY3lhZ1ecQqaUovLHw__micro/img/m9wCtK3h7H0N7DWeCylnXzqUk3Q=/fit-in/64x64/filters:strip_icc()/pic2844819.png"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname13">
+              <div id="status_objectname13">
+              </div>
+              <div id="results_objectname13" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/527/gipf">
+                GIPF
+               </a>
+               <span class="smallerfont dull">
+                (1996)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Cycle your own pieces while slowly depleting your opponent's reserve.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.477
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.10
+             </td>
+             <td align="center" class="collection_bggrating">
+              3236
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_527_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1214">
+              </a>
+              1214
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/22141/cleopatra-and-society-architects">
+               <img alt="Board Game: Cleopatra and the Society of Architects" src="https://cf.geekdo-images.com/7cNh9n1YX-TjuWPTjYXSiw__micro/img/qc-larkW5POQagrWYMQe_OpSMP0=/fit-in/64x64/filters:strip_icc()/pic1904123.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname14">
+              <div id="status_objectname14">
+              </div>
+              <div id="results_objectname14" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/22141/cleopatra-and-society-architects">
+                Cleopatra and the Society of Architects
+               </a>
+               <span class="smallerfont dull">
+                (2006)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Compete to build a three-dimensional palace for Cleopatra - Queen of the Nile.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.477
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.80
+             </td>
+             <td align="center" class="collection_bggrating">
+              6521
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_22141_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1215">
+              </a>
+              1215
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/187377/vikings-gone-wild">
+               <img alt="Board Game: Vikings Gone Wild" src="https://cf.geekdo-images.com/JE64fVnmk5_Pctb1H-M-pw__micro/img/M8GIclg46KMHccBbaoen5o9R3ss=/fit-in/64x64/filters:strip_icc()/pic3145803.png"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname15">
+              <div id="status_objectname15">
+              </div>
+              <div id="results_objectname15" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/187377/vikings-gone-wild">
+                Vikings Gone Wild
+               </a>
+               <span class="smallerfont dull">
+                (2017)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Generate gold and beer and attack your neigbors to obtain the gods' favors.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.477
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.13
+             </td>
+             <td align="center" class="collection_bggrating">
+              3607
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_187377_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <script>
+             GEEK.bggStoreAds.push('bggstore-inline-post_0');
+            </script>
+            <tr class="geekcollection_ad" hidden="" id="bggstore-inline-post_0">
+             <td colspan="7">
+              <div class="bgg-featured-items">
+               <h2 class="bgg-featured-items__title fw-bold">
+                Expand Your Collection
+               </h2>
+               <ul class="bgg-featured-item-grid">
+                <li class="bgg-featured-item-grid__item relative" style="display:none;">
+                 <img alt="product image alt" height="85" loading="lazy" src="" srcset="" width="85">
+                  <div>
+                   <h3>
+                    <a class="stretched-link link-text-color" href="#">
+                    </a>
+                   </h3>
+                   <p class="post-meta">
+                    <span class="post-meta__item text-success bggstore_price">
+                    </span>
+                    <span class="post-meta__item text-muted bggstore_storename">
+                    </span>
+                   </p>
+                  </div>
+                 </img>
+                </li>
+                <li class="bgg-featured-item-grid__item relative" style="display:none;">
+                 <img alt="product image alt" height="85" loading="lazy" src="" srcset="" width="85">
+                  <div>
+                   <h3>
+                    <a class="stretched-link link-text-color" href="#">
+                    </a>
+                   </h3>
+                   <p class="post-meta">
+                    <span class="post-meta__item text-success bggstore_price">
+                    </span>
+                    <span class="post-meta__item text-muted bggstore_storename">
+                    </span>
+                   </p>
+                  </div>
+                 </img>
+                </li>
+                <li class="bgg-featured-item-grid__item relative" style="display:none;">
+                 <img alt="product image alt" height="85" loading="lazy" src="" srcset="" width="85">
+                  <div>
+                   <h3>
+                    <a class="stretched-link link-text-color" href="#">
+                    </a>
+                   </h3>
+                   <p class="post-meta">
+                    <span class="post-meta__item text-success bggstore_price">
+                    </span>
+                    <span class="post-meta__item text-muted bggstore_storename">
+                    </span>
+                   </p>
+                  </div>
+                 </img>
+                </li>
+               </ul>
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1216">
+              </a>
+              1216
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/256606/spirits-wild">
+               <img alt="Board Game: Spirits of the Wild" src="https://cf.geekdo-images.com/3x2kFEjL0qygSNU2w9T0qQ__micro/img/M-TKUDmrKz_BkfSx0Z_c9-3u6wU=/fit-in/64x64/filters:strip_icc()/pic5521767.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname16">
+              <div id="status_objectname16">
+              </div>
+              <div id="results_objectname16" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/256606/spirits-wild">
+                Spirits of the Wild
+               </a>
+               <span class="smallerfont dull">
+                (2018)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Avoid Coyote's mischief while collecting colorful stones as gifts for spirit animals.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.477
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.35
+             </td>
+             <td align="center" class="collection_bggrating">
+              2380
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_256606_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1217">
+              </a>
+              1217
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/137649/level-7-omega-protocol">
+               <img alt="Board Game: Level 7 [Omega Protocol]" src="https://cf.geekdo-images.com/5pEU4NzNwExXBDUUwn1fDg__micro/img/icTSnukWkv5LlNp4CHRKvIFBlAI=/fit-in/64x64/filters:strip_icc()/pic7002084.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname17">
+              <div id="status_objectname17">
+              </div>
+              <div id="results_objectname17" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/137649/level-7-omega-protocol">
+                Level 7 [Omega Protocol]
+               </a>
+               <span class="smallerfont dull">
+                (2013)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Coordinate tactics with your squadmates in order to neutralize an alien threat.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.476
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.44
+             </td>
+             <td align="center" class="collection_bggrating">
+              2123
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_137649_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1218">
+              </a>
+              1218
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/333255/keep-heroes-out">
+               <img alt="Board Game: Keep the Heroes Out!" src="https://cf.geekdo-images.com/lfFKMNCzIJesp8IFHK8dEw__micro/img/FOb0vD-8jo4QKCtNkYTDwjincm0=/fit-in/64x64/filters:strip_icc()/pic6985339.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname18">
+              <div id="status_objectname18">
+              </div>
+              <div id="results_objectname18" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/333255/keep-heroes-out">
+                Keep the Heroes Out!
+               </a>
+               <span class="smallerfont dull">
+                (2022)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               As monsters, work together to defend your dungeon against so-called heroes.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.476
+             </td>
+             <td align="center" class="collection_bggrating">
+              8.02
+             </td>
+             <td align="center" class="collection_bggrating">
+              1487
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_333255_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1219">
+              </a>
+              1219
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/173101/council-4">
+               <img alt="Board Game: Council of 4" src="https://cf.geekdo-images.com/1PVwotn_MXzaG8aRWJBwLw__micro/img/PoSb25vLKXs_mkoOhANI4HKcSw4=/fit-in/64x64/filters:strip_icc()/pic3252438.png"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname19">
+              <div id="status_objectname19">
+              </div>
+              <div id="results_objectname19" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/173101/council-4">
+                Council of 4
+               </a>
+               <span class="smallerfont dull">
+                (2015)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Gain the favors of the council, even manipulate them, to build your trading posts.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.476
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.15
+             </td>
+             <td align="center" class="collection_bggrating">
+              2930
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_173101_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1220">
+              </a>
+              1220
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/268201/dice-throne">
+               <img alt="Board Game: Dice Throne" src="https://cf.geekdo-images.com/fx_i2HMyAeCyAh94fH7a1Q__micro/img/jogPksn4T4U7JbXTbNAlMq0NBVQ=/fit-in/64x64/filters:strip_icc()/pic4490309.png"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname20">
+              <div id="status_objectname20">
+              </div>
+              <div id="results_objectname20" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/268201/dice-throne">
+                Dice Throne
+               </a>
+               <span class="smallerfont dull">
+                (2018)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Heroes compete in an age old tournament.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.476
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.67
+             </td>
+             <td align="center" class="collection_bggrating">
+              1868
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_268201_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1221">
+              </a>
+              1221
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/242722/here-i-stand-500th-anniversary-edition">
+               <img alt="Board Game: Here I Stand: 500th Anniversary Edition" src="https://cf.geekdo-images.com/AMS9MRYUllEpYk8OHt7CxQ__micro/img/RiP0ngStaKURmvdY0z3L27VVu4U=/fit-in/64x64/filters:strip_icc()/pic6803202.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname21">
+              <div id="status_objectname21">
+              </div>
+              <div id="results_objectname21" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/242722/here-i-stand-500th-anniversary-edition">
+                Here I Stand: 500th Anniversary Edition
+               </a>
+               <span class="smallerfont dull">
+                (2017)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Europe in conflict during the Protestant Reformation of the early 16thC (2nd Ed)
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.475
+             </td>
+             <td align="center" class="collection_bggrating">
+              8.57
+             </td>
+             <td align="center" class="collection_bggrating">
+              982
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_242722_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1222">
+              </a>
+              1222
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/284936/cafe">
+               <img alt="Board Game: Café" src="https://cf.geekdo-images.com/_k736Etdsm6zTTOnF3RXYw__micro/img/Z4-iQ-GmMmmkk1o2WDXxBsR5G58=/fit-in/64x64/filters:strip_icc()/pic5410171.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname22">
+              <div id="status_objectname22">
+              </div>
+              <div id="results_objectname22" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/284936/cafe">
+                Café
+               </a>
+               <span class="smallerfont dull">
+                (2020)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Place cards efficiently to process and deliver coffee in early 20th-century Portugal.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.474
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.31
+             </td>
+             <td align="center" class="collection_bggrating">
+              2444
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_284936_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1223">
+              </a>
+              1223
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/180899/ponzi-scheme">
+               <img alt="Board Game: Ponzi Scheme" src="https://cf.geekdo-images.com/XrXpHvoeiA_cC1Caye1B7Q__micro/img/6oJsYyxZgPvyRelKZVR69rJDmkc=/fit-in/64x64/filters:strip_icc()/pic5100985.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname23">
+              <div id="status_objectname23">
+              </div>
+              <div id="results_objectname23" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/180899/ponzi-scheme">
+                Ponzi Scheme
+               </a>
+               <span class="smallerfont dull">
+                (2015)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Use funds from your investors to acquire industries, but can you pay them back?
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.473
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.15
+             </td>
+             <td align="center" class="collection_bggrating">
+              2847
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_180899_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1224">
+              </a>
+              1224
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/121297/fleet">
+               <img alt="Board Game: Fleet" src="https://cf.geekdo-images.com/BgINAtHKjkjNHd5rIGfVTg__micro/img/TO4ExorPefW8QY8mm2B6Vf4jQRg=/fit-in/64x64/filters:strip_icc()/pic1247682.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname24">
+              <div id="status_objectname24">
+              </div>
+              <div id="results_objectname24" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/121297/fleet">
+                Fleet
+               </a>
+               <span class="smallerfont dull">
+                (2012)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Acquire licenses, launch boats, and fish the great briny blue.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.473
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.85
+             </td>
+             <td align="center" class="collection_bggrating">
+              5174
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_121297_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1225">
+              </a>
+              1225
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/253608/18chesapeake">
+               <img alt="Board Game: 18Chesapeake" src="https://cf.geekdo-images.com/35WEzAn97LPqUhMogcqpfA__micro/img/IT0jpc4MhCGzzRnOXzklwSowxTY=/fit-in/64x64/filters:strip_icc()/pic4743849.png"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname25">
+              <div id="status_objectname25">
+              </div>
+              <div id="results_objectname25" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/253608/18chesapeake">
+                18Chesapeake
+               </a>
+               <span class="smallerfont dull">
+                (2020)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Ease yourself into 18XX by way of the Chesapeake Bay.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.473
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.74
+             </td>
+             <td align="center" class="collection_bggrating">
+              1515
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_253608_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1226">
+              </a>
+              1226
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/43443/castle-panic">
+               <img alt="Board Game: Castle Panic" src="https://cf.geekdo-images.com/ryPiCH15spkrdtvUI-utuA__micro/img/HoQmHEifhnaefV7eTFHqhh7Z60w=/fit-in/64x64/filters:strip_icc()/pic6966125.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname26">
+              <div id="status_objectname26">
+              </div>
+              <div id="results_objectname26" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/43443/castle-panic">
+                Castle Panic
+               </a>
+               <span class="smallerfont dull">
+                (2009)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               We’re under attack! Protect the castle from the onslaught of fierce monsters.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.472
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.65
+             </td>
+             <td align="center" class="collection_bggrating">
+              15827
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_43443_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1227">
+              </a>
+              1227
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/126100/mythos-tales">
+               <img alt="Board Game: Mythos Tales" src="https://cf.geekdo-images.com/XC1wIXVA2Gs7zoWcKJVpWA__micro/img/b6W6kKjend1rEM9bTI7QRO0AZ6M=/fit-in/64x64/filters:strip_icc()/pic3955344.png"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname27">
+              <div id="status_objectname27">
+              </div>
+              <div id="results_objectname27" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/126100/mythos-tales">
+                Mythos Tales
+               </a>
+               <span class="smallerfont dull">
+                (2016)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Your team investigates horrors in Arkham, then gets quizzed on the results.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.472
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.36
+             </td>
+             <td align="center" class="collection_bggrating">
+              2310
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_126100_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1228">
+              </a>
+              1228
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/240855/lockup-roll-player-tale">
+               <img alt="Board Game: Lockup: A Roll Player Tale" src="https://cf.geekdo-images.com/L8WpFpCpleUPwMpskrQMIw__micro/img/SQbBx73ndXMHf3gDN1-zJ_b9y4g=/fit-in/64x64/filters:strip_icc()/pic3881540.png"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname28">
+              <div id="status_objectname28">
+              </div>
+              <div id="results_objectname28" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/240855/lockup-roll-player-tale">
+                Lockup: A Roll Player Tale
+               </a>
+               <span class="smallerfont dull">
+                (2019)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Nasty bands of inmates attempt to gain the most reputation within Kulbak prison.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.472
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.38
+             </td>
+             <td align="center" class="collection_bggrating">
+              2167
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_240855_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1229">
+              </a>
+              1229
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/230085/agra">
+               <img alt="Board Game: Agra" src="https://cf.geekdo-images.com/cb8ydtRuQ-SADwD35oHX9w__micro/img/ZqHtwfoR52WwcfNhGbA0bsFehCo=/fit-in/64x64/filters:strip_icc()/pic3621105.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname29">
+              <div id="status_objectname29">
+              </div>
+              <div id="results_objectname29" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/230085/agra">
+                Agra
+               </a>
+               <span class="smallerfont dull">
+                (2017)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Grow wealth and influence in India by leveraging the Emperor's birthday festivities.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.469
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.31
+             </td>
+             <td align="center" class="collection_bggrating">
+              2376
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_230085_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1230">
+              </a>
+              1230
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/192074/odins-ravens-second-edition">
+               <img alt="Board Game: Odin's Ravens (Second Edition)" src="https://cf.geekdo-images.com/NME9DO7GFaXbOyM8DPnFEQ__micro/img/uZEffFqFKOOcYtDlnjAR1qTP5eQ=/fit-in/64x64/filters:strip_icc()/pic2643412.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname30">
+              <div id="status_objectname30">
+              </div>
+              <div id="results_objectname30" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/192074/odins-ravens-second-edition">
+                Odin's Ravens (Second Edition)
+               </a>
+               <span class="smallerfont dull">
+                (2016)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Use clever hand-management and the tricks of Loki to race around the world.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.469
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.01
+             </td>
+             <td align="center" class="collection_bggrating">
+              3842
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_192074_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr class="geekcollection_ad">
+             <td colspan="7">
+              <div class="text-center" id="dfp-inline-post_1">
+              </div>
+              <script>
+               GEEK.legacyAds.push('dfp-inline-post_1');
+              </script>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1231">
+              </a>
+              1231
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/299317/aeons-end-outcasts">
+               <img alt="Board Game: Aeon's End: Outcasts" src="https://cf.geekdo-images.com/TvSUxRcx_KsnJXaTJXP2Ww__micro/img/G7t7hlEcg8pCg2i28Txfb872G2o=/fit-in/64x64/filters:strip_icc()/pic5182494.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname31">
+              <div id="status_objectname31">
+              </div>
+              <div id="results_objectname31" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/299317/aeons-end-outcasts">
+                Aeon's End: Outcasts
+               </a>
+               <span class="smallerfont dull">
+                (2020)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Play a campaign against the monstrosities from beyond the Breach.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.468
+             </td>
+             <td align="center" class="collection_bggrating">
+              8.57
+             </td>
+             <td align="center" class="collection_bggrating">
+              957
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_299317_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1232">
+              </a>
+              1232
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/30381/hamburgum">
+               <img alt="Board Game: Hamburgum" src="https://cf.geekdo-images.com/cl4IPnlurFyQ1rNdFCyQkg__micro/img/bk0yMruk27i-xcSqMkwbWKLg2Dg=/fit-in/64x64/filters:strip_icc()/pic260141.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname32">
+              <div id="status_objectname32">
+              </div>
+              <div id="results_objectname32" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/30381/hamburgum">
+                Hamburgum
+               </a>
+               <span class="smallerfont dull">
+                (2007)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Families produce and trade goods, and build up Hamburg in the 17th Century.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.468
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.05
+             </td>
+             <td align="center" class="collection_bggrating">
+              3232
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_30381_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1233">
+              </a>
+              1233
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/102548/dungeon-fighter">
+               <img alt="Board Game: Dungeon Fighter" src="https://cf.geekdo-images.com/ukPf_rrA7ity7UQEVjWPNw__micro/img/IhqO4z6uZfsx3FFvajPV8CFVqp8=/fit-in/64x64/filters:strip_icc()/pic2411495.png"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname33">
+              <div id="status_objectname33">
+              </div>
+              <div id="results_objectname33" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/102548/dungeon-fighter">
+                Dungeon Fighter
+               </a>
+               <span class="smallerfont dull">
+                (2011)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Test your dice-rolling skills to overcome tricky challenges in dangerous dungeons.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.468
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.81
+             </td>
+             <td align="center" class="collection_bggrating">
+              6646
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_102548_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1234">
+              </a>
+              1234
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/174660/new-york-1901">
+               <img alt="Board Game: New York 1901" src="https://cf.geekdo-images.com/HTdnmBGtjaS2hgn9IEta9g__micro/img/zv3i6zPmKzCmg6r_eknw4C1RN5k=/fit-in/64x64/filters:strip_icc()/pic2515532.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname34">
+              <div id="status_objectname34">
+              </div>
+              <div id="results_objectname34" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/174660/new-york-1901">
+                New York 1901
+               </a>
+               <span class="smallerfont dull">
+                (2015)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Collect cards to build iconic New York City skyscrapers in the early 20th century.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.467
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.80
+             </td>
+             <td align="center" class="collection_bggrating">
+              6207
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_174660_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1235">
+              </a>
+              1235
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/282954/paris">
+               <img alt="Board Game: Paris" src="https://cf.geekdo-images.com/ImP902coxwYfSUF4sbw_nw__micro/img/ablPQNOavXeQUJcmbeDhT3cvtdc=/fit-in/64x64/filters:strip_icc()/pic5159421.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname35">
+              <div id="status_objectname35">
+              </div>
+              <div id="results_objectname35" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/282954/paris">
+                Paris
+               </a>
+               <span class="smallerfont dull">
+                (2020)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Improve districts in 19th century Paris and build landmarks for influence and points.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.467
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.27
+             </td>
+             <td align="center" class="collection_bggrating">
+              2477
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_282954_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1236">
+              </a>
+              1236
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/252752/genotype-mendelian-genetics-game">
+               <img alt="Board Game: Genotype: A Mendelian Genetics Game" src="https://cf.geekdo-images.com/vICtYft7WUXKiC3xfeh4Sg__micro/img/JcXgmzRGtGIndu9L9vdciTPZ49c=/fit-in/64x64/filters:strip_icc()/pic5990046.png"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname36">
+              <div id="status_objectname36">
+              </div>
+              <div id="results_objectname36" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/252752/genotype-mendelian-genetics-game">
+                Genotype: A Mendelian Genetics Game
+               </a>
+               <span class="smallerfont dull">
+                (2021)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Grab a trowel and breed pea plants on your way to become a master geneticist.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.467
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.52
+             </td>
+             <td align="center" class="collection_bggrating">
+              1889
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_252752_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1237">
+              </a>
+              1237
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/362452/atiwa">
+               <img alt="Board Game: Atiwa" src="https://cf.geekdo-images.com/9S_Ci89ADHj7sZ4SwHY19w__micro/img/M4DeKM9ePuhoG8i2m4GACHbSSJc=/fit-in/64x64/filters:strip_icc()/pic7245009.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname37">
+              <div id="status_objectname37">
+              </div>
+              <div id="results_objectname37" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/362452/atiwa">
+                Atiwa
+               </a>
+               <span class="smallerfont dull">
+                (2022)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Choose your actions carefully as you balance the needs of the community and nature.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.466
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.57
+             </td>
+             <td align="center" class="collection_bggrating">
+              1794
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_362452_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1238">
+              </a>
+              1238
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/16395/blokus-duo">
+               <img alt="Board Game: Blokus Duo" src="https://cf.geekdo-images.com/pn92DM-FlWMRWusB0eP7vQ__micro/img/90Un4dE8AZ1gR7r7cLHMCoYL4mY=/fit-in/64x64/filters:strip_icc()/pic1086904.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname38">
+              <div id="status_objectname38">
+              </div>
+              <div id="results_objectname38" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/16395/blokus-duo">
+                Blokus Duo
+               </a>
+               <span class="smallerfont dull">
+                (2005)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Play geometric shapes from your hand for points -- but don't get blocked in!
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.466
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.82
+             </td>
+             <td align="center" class="collection_bggrating">
+              5643
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_16395_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1239">
+              </a>
+              1239
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/152470/fief-france-1429">
+               <img alt="Board Game: Fief: France 1429" src="https://cf.geekdo-images.com/yGO9rEp57fabLG6sXO7SUQ__micro/img/WsqG5XEhWLpcrQgYZM_vtnRsbfw=/fit-in/64x64/filters:strip_icc()/pic1875823.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname39">
+              <div id="status_objectname39">
+              </div>
+              <div id="results_objectname39" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/152470/fief-france-1429">
+                Fief: France 1429
+               </a>
+               <span class="smallerfont dull">
+                (2015)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Lead your noble house to greatness through war, negotiations and loads of betrayal.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.466
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.43
+             </td>
+             <td align="center" class="collection_bggrating">
+              2246
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_152470_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1240">
+              </a>
+              1240
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/91873/strasbourg">
+               <img alt="Board Game: Strasbourg" src="https://cf.geekdo-images.com/5aTSIE4Ayv8K6I6XeJKvug__micro/img/rz-IL4inUE29-H9yGcyqe8tonXY=/fit-in/64x64/filters:strip_icc()/pic951192.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname40">
+              <div id="status_objectname40">
+              </div>
+              <div id="results_objectname40" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/91873/strasbourg">
+                Strasbourg
+               </a>
+               <span class="smallerfont dull">
+                (2011)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Get your family members into craft guilds using a unique bidding system.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.464
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.16
+             </td>
+             <td align="center" class="collection_bggrating">
+              2700
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_91873_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1241">
+              </a>
+              1241
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/35815/touch-evil-supernatural-game">
+               <img alt="Board Game: A Touch of Evil: The Supernatural Game" src="https://cf.geekdo-images.com/0o6UDfqfHkr45ESzN9Q_5Q__micro/img/iUGq8p7eYFQl4yXHxNV3yfDsPBs=/fit-in/64x64/filters:strip_icc()/pic326493.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname41">
+              <div id="status_objectname41">
+              </div>
+              <div id="results_objectname41" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/35815/touch-evil-supernatural-game">
+                A Touch of Evil: The Supernatural Game
+               </a>
+               <span class="smallerfont dull">
+                (2008)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Dashing heroes battle fiendish creatures in Colonial America.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.464
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.98
+             </td>
+             <td align="center" class="collection_bggrating">
+              4631
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_35815_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1242">
+              </a>
+              1242
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/66837/1862-railway-mania-eastern-counties">
+               <img alt="Board Game: 1862: Railway Mania in the Eastern Counties" src="https://cf.geekdo-images.com/GV2bNjHUq-tmc82OQU5BeQ__micro/img/jINTjSG7y0vPNddHdEn-hYPdu54=/fit-in/64x64/filters:strip_icc()/pic5739133.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname42">
+              <div id="status_objectname42">
+              </div>
+              <div id="results_objectname42" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/66837/1862-railway-mania-eastern-counties">
+                1862: Railway Mania in the Eastern Counties
+               </a>
+               <span class="smallerfont dull">
+                (2013)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Takes most of the common 18xx elements and turns them upside down.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.464
+             </td>
+             <td align="center" class="collection_bggrating">
+              8.24
+             </td>
+             <td align="center" class="collection_bggrating">
+              1075
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_66837_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1243">
+              </a>
+              1243
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/42910/peloponnes">
+               <img alt="Board Game: Peloponnes" src="https://cf.geekdo-images.com/ElaDJAdR6mV1jf0l8lVDpg__micro/img/D9Znovx98Z5rq3UTwsRkqsir0a8=/fit-in/64x64/filters:strip_icc()/pic586432.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname43">
+              <div id="status_objectname43">
+              </div>
+              <div id="results_objectname43" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/42910/peloponnes">
+                Peloponnes
+               </a>
+               <span class="smallerfont dull">
+                (2009)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               In ancient Greece, build up your population and power. Beware the disasters!
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.462
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.10
+             </td>
+             <td align="center" class="collection_bggrating">
+              2881
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_42910_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1244">
+              </a>
+              1244
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/123955/thunderbolt-apache-leader">
+               <img alt="Board Game: Thunderbolt Apache Leader" src="https://cf.geekdo-images.com/TmdTjsfF6hX8SL-h3cFTqA__micro/img/-9YQUhnfug6XowplnCAWhwnv9Co=/fit-in/64x64/filters:strip_icc()/pic6291950.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname44">
+              <div id="status_objectname44">
+              </div>
+              <div id="results_objectname44" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/123955/thunderbolt-apache-leader">
+                Thunderbolt Apache Leader
+               </a>
+               <span class="smallerfont dull">
+                (2012)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Plan the missions, select the team &amp; pray the pilots return successfully—or at all.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.462
+             </td>
+             <td align="center" class="collection_bggrating">
+              8.02
+             </td>
+             <td align="center" class="collection_bggrating">
+              1316
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_123955_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1245">
+              </a>
+              1245
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/154386/medieval-academy">
+               <img alt="Board Game: Medieval Academy" src="https://cf.geekdo-images.com/T5D8h0d5kXhtNIoZFCQ1sQ__micro/img/Li7zPbSNLhBJTJrOZiacdcWTJIs=/fit-in/64x64/filters:strip_icc()/pic2468716.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname45">
+              <div id="status_objectname45">
+              </div>
+              <div id="results_objectname45" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/154386/medieval-academy">
+                Medieval Academy
+               </a>
+               <span class="smallerfont dull">
+                (2014)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Train to become a knight in several areas of competition.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.461
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.94
+             </td>
+             <td align="center" class="collection_bggrating">
+              3942
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_154386_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <script>
+             GEEK.bggStoreAds.push('bggstore-inline-post_2');
+            </script>
+            <tr class="geekcollection_ad" hidden="" id="bggstore-inline-post_2">
+             <td colspan="7">
+              <div class="bgg-featured-items">
+               <h2 class="bgg-featured-items__title fw-bold">
+                Expand Your Collection
+               </h2>
+               <ul class="bgg-featured-item-grid">
+                <li class="bgg-featured-item-grid__item relative" style="display:none;">
+                 <img alt="product image alt" height="85" loading="lazy" src="" srcset="" width="85">
+                  <div>
+                   <h3>
+                    <a class="stretched-link link-text-color" href="#">
+                    </a>
+                   </h3>
+                   <p class="post-meta">
+                    <span class="post-meta__item text-success bggstore_price">
+                    </span>
+                    <span class="post-meta__item text-muted bggstore_storename">
+                    </span>
+                   </p>
+                  </div>
+                 </img>
+                </li>
+                <li class="bgg-featured-item-grid__item relative" style="display:none;">
+                 <img alt="product image alt" height="85" loading="lazy" src="" srcset="" width="85">
+                  <div>
+                   <h3>
+                    <a class="stretched-link link-text-color" href="#">
+                    </a>
+                   </h3>
+                   <p class="post-meta">
+                    <span class="post-meta__item text-success bggstore_price">
+                    </span>
+                    <span class="post-meta__item text-muted bggstore_storename">
+                    </span>
+                   </p>
+                  </div>
+                 </img>
+                </li>
+                <li class="bgg-featured-item-grid__item relative" style="display:none;">
+                 <img alt="product image alt" height="85" loading="lazy" src="" srcset="" width="85">
+                  <div>
+                   <h3>
+                    <a class="stretched-link link-text-color" href="#">
+                    </a>
+                   </h3>
+                   <p class="post-meta">
+                    <span class="post-meta__item text-success bggstore_price">
+                    </span>
+                    <span class="post-meta__item text-muted bggstore_storename">
+                    </span>
+                   </p>
+                  </div>
+                 </img>
+                </li>
+               </ul>
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1246">
+              </a>
+              1246
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/159504/folklore-affliction">
+               <img alt="Board Game: Folklore: The Affliction" src="https://cf.geekdo-images.com/7GPc68Crw-MqJHEL9k0kAA__micro/img/fjqR0CQ6gg6MSv_IHNeYl2cpkH0=/fit-in/64x64/filters:strip_icc()/pic3647804.png"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname46">
+              <div id="status_objectname46">
+              </div>
+              <div id="results_objectname46" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/159504/folklore-affliction">
+                Folklore: The Affliction
+               </a>
+               <span class="smallerfont dull">
+                (2017)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Scenario driven co-op adventure in a world of gothic horror.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.461
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.71
+             </td>
+             <td align="center" class="collection_bggrating">
+              2026
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_159504_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1247">
+              </a>
+              1247
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/188547/maximum-apocalypse">
+               <img alt="Board Game: Maximum Apocalypse" src="https://cf.geekdo-images.com/O95V2uCW6rg3RYycMyag_w__micro/img/8JcoIyHyUierEMjSFHqFlop4rM4=/fit-in/64x64/filters:strip_icc()/pic7598653.png"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname47">
+              <div id="status_objectname47">
+              </div>
+              <div id="results_objectname47" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/188547/maximum-apocalypse">
+                Maximum Apocalypse
+               </a>
+               <span class="smallerfont dull">
+                (2018)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Pick a unique hero deck.  Loot map tiles. Survive your chosen Armageddon.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.460
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.53
+             </td>
+             <td align="center" class="collection_bggrating">
+              2150
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_188547_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1248">
+              </a>
+              1248
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/247236/duelosaur-island">
+               <img alt="Board Game: Duelosaur Island" src="https://cf.geekdo-images.com/paSj18K2b6r2pH-ax37mNA__micro/img/BRjwVUZR0jOLz-D3MgNzEAjtE7A=/fit-in/64x64/filters:strip_icc()/pic4194135.png"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname48">
+              <div id="status_objectname48">
+              </div>
+              <div id="results_objectname48" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/247236/duelosaur-island">
+                Duelosaur Island
+               </a>
+               <span class="smallerfont dull">
+                (2018)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Compete against your rival to build the most exciting dinosaur park in the world.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.460
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.06
+             </td>
+             <td align="center" class="collection_bggrating">
+              3294
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_247236_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1249">
+              </a>
+              1249
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/147303/carcassonne-south-seas">
+               <img alt="Board Game: Carcassonne: South Seas" src="https://cf.geekdo-images.com/IOHj2BPw0iHrJLkt2yPMRQ__micro/img/csGolP7s8sXMcFX2tC4d1xOem28=/fit-in/64x64/filters:strip_icc()/pic1917224.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname49">
+              <div id="status_objectname49">
+              </div>
+              <div id="results_objectname49" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/147303/carcassonne-south-seas">
+                Carcassonne: South Seas
+               </a>
+               <span class="smallerfont dull">
+                (2013)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Will you become the best captain this variant to the classic game Carcassonne?
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.460
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.06
+             </td>
+             <td align="center" class="collection_bggrating">
+              3394
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_147303_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1250">
+              </a>
+              1250
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/226518/exit-game-sunken-treasure">
+               <img alt="Board Game: Exit: The Game – The Sunken Treasure" src="https://cf.geekdo-images.com/Qy3-Sz1IZB5v4n3uAZ29TA__micro/img/UqumJDwY-eHJyffFmY-RzxKfvGc=/fit-in/64x64/filters:strip_icc()/pic3958802.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname50">
+              <div id="status_objectname50">
+              </div>
+              <div id="results_objectname50" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/226518/exit-game-sunken-treasure">
+                Exit: The Game – The Sunken Treasure
+               </a>
+               <span class="smallerfont dull">
+                (2017)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Embark on an undersea trek to secure a treasure before your oxygen or clues run out.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.460
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.06
+             </td>
+             <td align="center" class="collection_bggrating">
+              3292
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_226518_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1251">
+              </a>
+              1251
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/328908/initiative">
+               <img alt="Board Game: The Initiative" src="https://cf.geekdo-images.com/VbJ4TS-lQOE3Ki0oVkiIEA__micro/img/GrK44lcJkWnlUq5oeAJykWMJ42M=/fit-in/64x64/filters:strip_icc()/pic5910298.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname51">
+              <div id="status_objectname51">
+              </div>
+              <div id="results_objectname51" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/328908/initiative">
+                The Initiative
+               </a>
+               <span class="smallerfont dull">
+                (2021)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Unravel the secret of The Key, a game within a game set in the year 1994.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.459
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.62
+             </td>
+             <td align="center" class="collection_bggrating">
+              1795
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_328908_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1252">
+              </a>
+              1252
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/245422/werewords-deluxe-edition">
+               <img alt="Board Game: Werewords Deluxe Edition" src="https://cf.geekdo-images.com/77oWoTv9Jrd-haIPL_SwwA__micro/img/MEb5nf0Ic-Z2mrFIyvsJOMGtzoE=/fit-in/64x64/filters:strip_icc()/pic3966906.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname52">
+              <div id="status_objectname52">
+              </div>
+              <div id="results_objectname52" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/245422/werewords-deluxe-edition">
+                Werewords Deluxe Edition
+               </a>
+               <span class="smallerfont dull">
+                (2018)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               20 questions with a twist: a time limit, and a sneaky werewolf who knows the answer.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.459
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.55
+             </td>
+             <td align="center" class="collection_bggrating">
+              1771
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_245422_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1253">
+              </a>
+              1253
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/327711/its-wonderful-kingdom">
+               <img alt="Board Game: It's a Wonderful Kingdom" src="https://cf.geekdo-images.com/YMJnUYqIXrOEiqVOqfhWQw__micro/img/Rfid8gO3TgIG5jb3MFzTiazP5c4=/fit-in/64x64/filters:strip_icc()/pic6929415.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname53">
+              <div id="status_objectname53">
+              </div>
+              <div id="results_objectname53" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/327711/its-wonderful-kingdom">
+                It's a Wonderful Kingdom
+               </a>
+               <span class="smallerfont dull">
+                (2021)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Build up your kingdom by getting your hands on the best cards.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.458
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.34
+             </td>
+             <td align="center" class="collection_bggrating">
+              2277
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_327711_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1254">
+              </a>
+              1254
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/204836/escape-room-game">
+               <img alt="Board Game: Escape Room: The Game" src="https://cf.geekdo-images.com/1CIfreuv-gqcaUndxUAExw__micro/img/Ql7L011uoWKcTspU2n_gJ_LAunE=/fit-in/64x64/filters:strip_icc()/pic3117400.png"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname54">
+              <div id="status_objectname54">
+              </div>
+              <div id="results_objectname54" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/204836/escape-room-game">
+                Escape Room: The Game
+               </a>
+               <span class="smallerfont dull">
+                (2016)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Solve puzzles and use the keys to stop the chrono decoder to escape the room!
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.458
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.94
+             </td>
+             <td align="center" class="collection_bggrating">
+              4048
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_204836_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1255">
+              </a>
+              1255
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/19100/hacienda">
+               <img alt="Board Game: Hacienda" src="https://cf.geekdo-images.com/rUqnRtf5-gBw4JShxnO-JQ__micro/img/kPxq_1z3-JNiC1QFrSv-P0ZrOsI=/fit-in/64x64/filters:strip_icc()/pic121746.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname55">
+              <div id="status_objectname55">
+              </div>
+              <div id="results_objectname55" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/19100/hacienda">
+                Hacienda
+               </a>
+               <span class="smallerfont dull">
+                (2005)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Become the savviest rancher, linking land &amp; herds together before the deck runs out!
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.458
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.92
+             </td>
+             <td align="center" class="collection_bggrating">
+              4178
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_19100_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1256">
+              </a>
+              1256
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/326945/castles-mad-king-ludwig-collectors-edition">
+               <img alt="Board Game: Castles of Mad King Ludwig: Collector's Edition" src="https://cf.geekdo-images.com/djWGzAqcGYKhQCKo6Xeg-g__micro/img/8TeUOTbM_jjrVPCRbbx0N6dqJIY=/fit-in/64x64/filters:strip_icc()/pic5932932.png"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname56">
+              <div id="status_objectname56">
+              </div>
+              <div id="results_objectname56" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/326945/castles-mad-king-ludwig-collectors-edition">
+                Castles of Mad King Ludwig: Collector's Edition
+               </a>
+               <span class="smallerfont dull">
+                (2022)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Satisfy the king's whims by building the best fantasy castle, now with more options.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.458
+             </td>
+             <td align="center" class="collection_bggrating">
+              8.40
+             </td>
+             <td align="center" class="collection_bggrating">
+              1016
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_326945_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1257">
+              </a>
+              1257
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/25643/arkadia">
+               <img alt="Board Game: Arkadia" src="https://cf.geekdo-images.com/poTEdGkJ1951xlYazQXp8A__micro/img/yW0MyLKns_yOdLm4zPBdkMaG-J8=/fit-in/64x64/filters:strip_icc()/pic193620.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname57">
+              <div id="status_objectname57">
+              </div>
+              <div id="results_objectname57" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/25643/arkadia">
+                Arkadia
+               </a>
+               <span class="smallerfont dull">
+                (2006)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Place workers and buildings, get and cash seals as your manipulate their market value
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.458
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.91
+             </td>
+             <td align="center" class="collection_bggrating">
+              4286
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_25643_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1258">
+              </a>
+              1258
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/284108/pictures">
+               <img alt="Board Game: Pictures" src="https://cf.geekdo-images.com/pR7dcr6bs5TIOHOhKIoe_A__micro/img/34I5odoblHYMTBzajbTICrI6RRw=/fit-in/64x64/filters:strip_icc()/pic4946885.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname58">
+              <div id="status_objectname58">
+              </div>
+              <div id="results_objectname58" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/284108/pictures">
+                Pictures
+               </a>
+               <span class="smallerfont dull">
+                (2019)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Everyone uses vastly different items to get others to match their pieces to a photo!
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.458
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.21
+             </td>
+             <td align="center" class="collection_bggrating">
+              2528
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_284108_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1259">
+              </a>
+              1259
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/104347/santiago-de-cuba">
+               <img alt="Board Game: Santiago de Cuba" src="https://cf.geekdo-images.com/v4Rk-agCbbmMNo3vUQ1IcA__micro/img/y7sHoLXDXruSEQj18dfc1tXNkvs=/fit-in/64x64/filters:strip_icc()/pic1918128.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname59">
+              <div id="status_objectname59">
+              </div>
+              <div id="results_objectname59" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/104347/santiago-de-cuba">
+                Santiago de Cuba
+               </a>
+               <span class="smallerfont dull">
+                (2011)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Collect goods and meet the demand of those ever-present cargo ships.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.456
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.89
+             </td>
+             <td align="center" class="collection_bggrating">
+              4538
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_104347_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1260">
+              </a>
+              1260
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/238638/castell">
+               <img alt="Board Game: Castell" src="https://cf.geekdo-images.com/T421NvY_hmmQ8JNaOi4c8Q__micro/img/mpPBieF6n5Rm5jaYZr04twjX2ek=/fit-in/64x64/filters:strip_icc()/pic3984592.png"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname60">
+              <div id="status_objectname60">
+              </div>
+              <div id="results_objectname60" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/238638/castell">
+                Castell
+               </a>
+               <span class="smallerfont dull">
+                (2018)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Train your Team to build the most impressive human towers in all of Catalonia.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.456
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.43
+             </td>
+             <td align="center" class="collection_bggrating">
+              1918
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_238638_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr class="geekcollection_ad">
+             <td colspan="7">
+              <div class="text-center" id="dfp-inline-post_3">
+              </div>
+              <script>
+               GEEK.legacyAds.push('dfp-inline-post_3');
+              </script>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1261">
+              </a>
+              1261
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/218421/street-masters">
+               <img alt="Board Game: Street Masters" src="https://cf.geekdo-images.com/ieUOjJ9WKW7G0-XUtrBBBA__micro/img/8sSGXAx-0HGCHhhF3KvHS7hoEdI=/fit-in/64x64/filters:strip_icc()/pic4194059.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname61">
+              <div id="status_objectname61">
+              </div>
+              <div id="results_objectname61" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/218421/street-masters">
+                Street Masters
+               </a>
+               <span class="smallerfont dull">
+                (2018)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Be a Master of Street Fighting.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.455
+             </td>
+             <td align="center" class="collection_bggrating">
+              8.00
+             </td>
+             <td align="center" class="collection_bggrating">
+              1329
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_218421_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1262">
+              </a>
+              1262
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/164338/golden-ages">
+               <img alt="Board Game: The Golden Ages" src="https://cf.geekdo-images.com/AsN-fh_MYQliiLj_hGEftw__micro/img/5qZnu-pgJBOFCc6k7lQdwyHsGpE=/fit-in/64x64/filters:strip_icc()/pic2551380.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname62">
+              <div id="status_objectname62">
+              </div>
+              <div id="results_objectname62" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/164338/golden-ages">
+                The Golden Ages
+               </a>
+               <span class="smallerfont dull">
+                (2014)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Let your civilization grow till it reaches its Golden Age.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.455
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.26
+             </td>
+             <td align="center" class="collection_bggrating">
+              2348
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_164338_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1263">
+              </a>
+              1263
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/50768/ninjato">
+               <img alt="Board Game: Ninjato" src="https://cf.geekdo-images.com/dJ7R-nA2hbn5r9ymVL5bkQ__micro/img/5Xx_pxHk_TzB0yVland4yQDloHs=/fit-in/64x64/filters:strip_icc()/pic967931.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname63">
+              <div id="status_objectname63">
+              </div>
+              <div id="results_objectname63" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/50768/ninjato">
+                Ninjato
+               </a>
+               <span class="smallerfont dull">
+                (2011)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Ninjas raid noble homes to claim tools, techniques and allies. Who will dare to win?
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.455
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.16
+             </td>
+             <td align="center" class="collection_bggrating">
+              2706
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_50768_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1264">
+              </a>
+              1264
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/269595/copenhagen">
+               <img alt="Board Game: Copenhagen" src="https://cf.geekdo-images.com/9rxcvgJyZ4_gJ651hMBU_A__micro/img/CQpu7L7ITJWWPii_M8Ya1pcDTjA=/fit-in/64x64/filters:strip_icc()/pic4518807.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname64">
+              <div id="status_objectname64">
+              </div>
+              <div id="results_objectname64" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/269595/copenhagen">
+                Copenhagen
+               </a>
+               <span class="smallerfont dull">
+                (2019)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Polyomino your way to the grandest facades in the Danish capital.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.455
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.99
+             </td>
+             <td align="center" class="collection_bggrating">
+              3673
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_269595_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1265">
+              </a>
+              1265
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/165986/royals">
+               <img alt="Board Game: Royals" src="https://cf.geekdo-images.com/Un-yHPPUaH7IpTfiG7ffkw__micro/img/S_zdMyiBkCKxZs7Sxv7LSrhGo_4=/fit-in/64x64/filters:strip_icc()/pic3021582.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname65">
+              <div id="status_objectname65">
+              </div>
+              <div id="results_objectname65" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/165986/royals">
+                Royals
+               </a>
+               <span class="smallerfont dull">
+                (2014)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Noble houses scramble to claim strongholds in 17th century Europe.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.454
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.17
+             </td>
+             <td align="center" class="collection_bggrating">
+              2669
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_165986_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1266">
+              </a>
+              1266
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/228660/betrayal-baldurs-gate">
+               <img alt="Board Game: Betrayal at Baldur's Gate" src="https://cf.geekdo-images.com/O6TfqmDWCkJvZPZw6pcxpg__micro/img/QzaMW081MM5nuT5aO1DeJJ94ngY=/fit-in/64x64/filters:strip_icc()/pic6552099.png"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname66">
+              <div id="status_objectname66">
+              </div>
+              <div id="results_objectname66" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/228660/betrayal-baldurs-gate">
+                Betrayal at Baldur's Gate
+               </a>
+               <span class="smallerfont dull">
+                (2017)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Explore the city, discover its mystery, and face the traitor amongst yourselves....
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.454
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.10
+             </td>
+             <td align="center" class="collection_bggrating">
+              3838
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_228660_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1267">
+              </a>
+              1267
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/332386/brew">
+               <img alt="Board Game: Brew" src="https://cf.geekdo-images.com/8eN5t1p4ncee-eVN9NswDA__micro/img/vmtjzdE3LY26odp5QeWHfIJ6J7o=/fit-in/64x64/filters:strip_icc()/pic6007253.png"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname67">
+              <div id="status_objectname67">
+              </div>
+              <div id="results_objectname67" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/332386/brew">
+                Brew
+               </a>
+               <span class="smallerfont dull">
+                (2021)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Bring balance back to the forest with potions and woodland creatures.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.454
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.14
+             </td>
+             <td align="center" class="collection_bggrating">
+              3108
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_332386_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1268">
+              </a>
+              1268
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/257614/tussie-mussie">
+               <img alt="Board Game: Tussie Mussie" src="https://cf.geekdo-images.com/bOTxzLrmwptfbAre3JnS3w__micro/img/BpquHoY_wMxcPCEAyjR3x6mziEg=/fit-in/64x64/filters:strip_icc()/pic5456717.png"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname68">
+              <div id="status_objectname68">
+              </div>
+              <div id="results_objectname68" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/257614/tussie-mussie">
+                Tussie Mussie
+               </a>
+               <span class="smallerfont dull">
+                (2019)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Victorians knew every flower has a meaning.  Which flowers will you choose?
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.453
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.95
+             </td>
+             <td align="center" class="collection_bggrating">
+              4003
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_257614_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1269">
+              </a>
+              1269
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/302524/super-skill-pinball-4-cade">
+               <img alt="Board Game: Super-Skill Pinball: 4-Cade" src="https://cf.geekdo-images.com/Tmm3TEDHjb4daehm9sgstQ__micro/img/rJS29Wk4leZqyfdF2JN-CR8zIIM=/fit-in/64x64/filters:strip_icc()/pic5295593.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname69">
+              <div id="status_objectname69">
+              </div>
+              <div id="results_objectname69" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/302524/super-skill-pinball-4-cade">
+                Super-Skill Pinball: 4-Cade
+               </a>
+               <span class="smallerfont dull">
+                (2020)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Roll dice and ricochet around a diverse series of thematic pinball tables.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.453
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.14
+             </td>
+             <td align="center" class="collection_bggrating">
+              2828
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_302524_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1270">
+              </a>
+              1270
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/42452/rattus">
+               <img alt="Board Game: Rattus" src="https://cf.geekdo-images.com/wKT_pdW6lOCTWCkkjlhNkg__micro/img/Gboqm5_0vY3PQwP6K0FCU0cD3z4=/fit-in/64x64/filters:strip_icc()/pic612591.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname70">
+              <div id="status_objectname70">
+              </div>
+              <div id="results_objectname70" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/42452/rattus">
+                Rattus
+               </a>
+               <span class="smallerfont dull">
+                (2010)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Manage your population throughout medieval Europe to survive the plague.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.453
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.78
+             </td>
+             <td align="center" class="collection_bggrating">
+              6000
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_42452_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1271">
+              </a>
+              1271
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/160610/thunderbirds">
+               <img alt="Board Game: Thunderbirds" src="https://cf.geekdo-images.com/27mTrq8Yc2gTLEXEVDXK9w__micro/img/dk4gmd8DhG6mHl5TzefEW3V2HvA=/fit-in/64x64/filters:strip_icc()/pic2374467.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname71">
+              <div id="status_objectname71">
+              </div>
+              <div id="results_objectname71" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/160610/thunderbirds">
+                Thunderbirds
+               </a>
+               <span class="smallerfont dull">
+                (2015)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Never give in, at any cost! Coordinate your efforts to foil vile plots.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.452
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.55
+             </td>
+             <td align="center" class="collection_bggrating">
+              1932
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_160610_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1272">
+              </a>
+              1272
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/314088/agropolis">
+               <img alt="Board Game: Agropolis" src="https://cf.geekdo-images.com/KcE2t-zmo-p-POO8fPTUmA__micro/img/BYECH8fS-QnI5-MYkSFxDOGE6vY=/fit-in/64x64/filters:strip_icc()/pic5674430.png"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname72">
+              <div id="status_objectname72">
+              </div>
+              <div id="results_objectname72" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/314088/agropolis">
+                Agropolis
+               </a>
+               <span class="smallerfont dull">
+                (2021)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Add farms to the card-laying experience of Sprawlopolis.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.452
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.42
+             </td>
+             <td align="center" class="collection_bggrating">
+              1940
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_314088_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1273">
+              </a>
+              1273
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/223855/sentient">
+               <img alt="Board Game: Sentient" src="https://cf.geekdo-images.com/GMVGWh_YNClAIWIBoTvb-w__micro/img/D5wbJR06B5CludfOjHBLN2-534o=/fit-in/64x64/filters:strip_icc()/pic3496086.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname73">
+              <div id="status_objectname73">
+              </div>
+              <div id="results_objectname73" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/223855/sentient">
+                Sentient
+               </a>
+               <span class="smallerfont dull">
+                (2017)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Draft cards to manipulate your dice and collect investors for your technology.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.452
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.20
+             </td>
+             <td align="center" class="collection_bggrating">
+              2529
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_223855_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1274">
+              </a>
+              1274
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/303553/skulls-sedlec">
+               <img alt="Board Game: Skulls of Sedlec" src="https://cf.geekdo-images.com/4MpLgMNWqNsH3RQ9cO9mhA__micro/img/EeTRD50b0Dp__u9Ev41hf5cXSk4=/fit-in/64x64/filters:strip_icc()/pic7007048.png"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname74">
+              <div id="status_objectname74">
+              </div>
+              <div id="results_objectname74" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/303553/skulls-sedlec">
+                Skulls of Sedlec
+               </a>
+               <span class="smallerfont dull">
+                (2020)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Stack skulls in the Sedlec Ossuary to help the deceased finally rest peacefully.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.452
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.43
+             </td>
+             <td align="center" class="collection_bggrating">
+              1956
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_303553_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1275">
+              </a>
+              1275
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/1540/battletech">
+               <img alt="Board Game: BattleTech" src="https://cf.geekdo-images.com/MmCjO907d3IB6IcK3Veqhw__micro/img/kGyeo1VdDDlVukdlMfIsUGn12xs=/fit-in/64x64/filters:strip_icc()/pic1748230.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname75">
+              <div id="status_objectname75">
+              </div>
+              <div id="results_objectname75" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/1540/battletech">
+                BattleTech
+               </a>
+               <span class="smallerfont dull">
+                (1985)
+               </span>
+              </div>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.451
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.09
+             </td>
+             <td align="center" class="collection_bggrating">
+              3564
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_1540_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <script>
+             GEEK.bggStoreAds.push('bggstore-inline-post_4');
+            </script>
+            <tr class="geekcollection_ad" hidden="" id="bggstore-inline-post_4">
+             <td colspan="7">
+              <div class="bgg-featured-items">
+               <h2 class="bgg-featured-items__title fw-bold">
+                Expand Your Collection
+               </h2>
+               <ul class="bgg-featured-item-grid">
+                <li class="bgg-featured-item-grid__item relative" style="display:none;">
+                 <img alt="product image alt" height="85" loading="lazy" src="" srcset="" width="85">
+                  <div>
+                   <h3>
+                    <a class="stretched-link link-text-color" href="#">
+                    </a>
+                   </h3>
+                   <p class="post-meta">
+                    <span class="post-meta__item text-success bggstore_price">
+                    </span>
+                    <span class="post-meta__item text-muted bggstore_storename">
+                    </span>
+                   </p>
+                  </div>
+                 </img>
+                </li>
+                <li class="bgg-featured-item-grid__item relative" style="display:none;">
+                 <img alt="product image alt" height="85" loading="lazy" src="" srcset="" width="85">
+                  <div>
+                   <h3>
+                    <a class="stretched-link link-text-color" href="#">
+                    </a>
+                   </h3>
+                   <p class="post-meta">
+                    <span class="post-meta__item text-success bggstore_price">
+                    </span>
+                    <span class="post-meta__item text-muted bggstore_storename">
+                    </span>
+                   </p>
+                  </div>
+                 </img>
+                </li>
+                <li class="bgg-featured-item-grid__item relative" style="display:none;">
+                 <img alt="product image alt" height="85" loading="lazy" src="" srcset="" width="85">
+                  <div>
+                   <h3>
+                    <a class="stretched-link link-text-color" href="#">
+                    </a>
+                   </h3>
+                   <p class="post-meta">
+                    <span class="post-meta__item text-success bggstore_price">
+                    </span>
+                    <span class="post-meta__item text-muted bggstore_storename">
+                    </span>
+                   </p>
+                  </div>
+                 </img>
+                </li>
+               </ul>
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1276">
+              </a>
+              1276
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/149155/dead-mans-draw">
+               <img alt="Board Game: Dead Man's Draw" src="https://cf.geekdo-images.com/eaQKjfqPhuO0hq43hE05wQ__micro/img/eUOJD0OFh8niom2xjKXae3_02WE=/fit-in/64x64/filters:strip_icc()/pic3095861.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname76">
+              <div id="status_objectname76">
+              </div>
+              <div id="results_objectname76" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/149155/dead-mans-draw-captain-carcass">
+                Dead Man's Draw: Captain Carcass
+               </a>
+               <span class="smallerfont dull">
+                (2015)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Use various pirate powers to push your luck in this quick card game.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.451
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.85
+             </td>
+             <td align="center" class="collection_bggrating">
+              5431
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_149155_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1277">
+              </a>
+              1277
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/39953/game-thrones-card-game">
+               <img alt="Board Game: A Game of Thrones: The Card Game" src="https://cf.geekdo-images.com/UYVMaIHPZRLqnUAhftKxRA__micro/img/Yyb38RKpCpDVwegZzKvcRpNdNaQ=/fit-in/64x64/filters:strip_icc()/pic1195948.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname77">
+              <div id="status_objectname77">
+              </div>
+              <div id="results_objectname77" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/39953/game-thrones-card-game">
+                A Game of Thrones: The Card Game
+               </a>
+               <span class="smallerfont dull">
+                (2008)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Command Westeros' factions and plot your path to the Iron Throne.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.451
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.82
+             </td>
+             <td align="center" class="collection_bggrating">
+              6221
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_39953_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1278">
+              </a>
+              1278
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/855/java">
+               <img alt="Board Game: Java" src="https://cf.geekdo-images.com/xojY9ltzSnbkaZyZyDEbSQ__micro/img/FJjvmLAOsy5tyJd1Z6NGYjBICrQ=/fit-in/64x64/filters:strip_icc()/pic427860.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname78">
+              <div id="status_objectname78">
+              </div>
+              <div id="results_objectname78" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/855/java">
+                Java
+               </a>
+               <span class="smallerfont dull">
+                (2000)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               As a Javanese ruler, become the dominant force in this underdeveloped area.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.449
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.01
+             </td>
+             <td align="center" class="collection_bggrating">
+              3440
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_855_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1279">
+              </a>
+              1279
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/288169/fox-forest-duet">
+               <img alt="Board Game: The Fox in the Forest Duet" src="https://cf.geekdo-images.com/1uTAJoAdG3UC6N0G7UMeTA__micro/img/qRiIhhltO4VZetYNVpH_NlVEAqc=/fit-in/64x64/filters:strip_icc()/pic4942502.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname79">
+              <div id="status_objectname79">
+              </div>
+              <div id="results_objectname79" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/288169/fox-forest-duet">
+                The Fox in the Forest Duet
+               </a>
+               <span class="smallerfont dull">
+                (2020)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Win tricks to move in the forest, collecting the gems before running out of time.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.449
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.08
+             </td>
+             <td align="center" class="collection_bggrating">
+              3069
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_288169_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1280">
+              </a>
+              1280
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/177802/smash-its-your-fault">
+               <img alt="Board Game: Smash Up: It's Your Fault!" src="https://cf.geekdo-images.com/9oxsjNlu9BL54x6Vtvkzsg__micro/img/KDNX7aWmtQVi-pAfIfKw1gcDy50=/fit-in/64x64/filters:strip_icc()/pic2843367.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname80">
+              <div id="status_objectname80">
+              </div>
+              <div id="results_objectname80" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/177802/smash-its-your-fault">
+                Smash Up: It's Your Fault!
+               </a>
+               <span class="smallerfont dull">
+                (2016)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               The set YOU chose!  Four factions decided on by the players.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.449
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.49
+             </td>
+             <td align="center" class="collection_bggrating">
+              1958
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_177802_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1281">
+              </a>
+              1281
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/41916/magic-labyrinth">
+               <img alt="Board Game: The Magic Labyrinth" src="https://cf.geekdo-images.com/pxaH7_Vihsg-nJBsXLvCRA__micro/img/GHTHRrdcUKPfR6YyYW0txpoj7Sw=/fit-in/64x64/filters:strip_icc()/pic953186.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname81">
+              <div id="status_objectname81">
+              </div>
+              <div id="results_objectname81" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/41916/magic-labyrinth">
+                The Magic Labyrinth
+               </a>
+               <span class="smallerfont dull">
+                (2009)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Navigate the unseen labyrinth using only your memory to collect the lost artifacts.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.449
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.82
+             </td>
+             <td align="center" class="collection_bggrating">
+              5876
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_41916_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1282">
+              </a>
+              1282
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/12995/dungeon-twister">
+               <img alt="Board Game: Dungeon Twister" src="https://cf.geekdo-images.com/fngIoEZCqy8mAFmygDdbCg__micro/img/0LDdwQ89yw3Z7kmss-mGmwj4ujo=/fit-in/64x64/filters:strip_icc()/pic97630.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname82">
+              <div id="status_objectname82">
+              </div>
+              <div id="results_objectname82" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/12995/dungeon-twister">
+                Dungeon Twister
+               </a>
+               <span class="smallerfont dull">
+                (2004)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Escape the dungeon or die trying in this head-to-head duel of wits.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.448
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.81
+             </td>
+             <td align="center" class="collection_bggrating">
+              5995
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_12995_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1283">
+              </a>
+              1283
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/38159/ultimate-werewolf-ultimate-edition">
+               <img alt="Board Game: Ultimate Werewolf: Ultimate Edition" src="https://cf.geekdo-images.com/PoIvN70fNYdwgeaap0CKqw__micro/img/hdtMlKShCCM3zCBtT8EqzXgE0Fs=/fit-in/64x64/filters:strip_icc()/pic1849390.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname83">
+              <div id="status_objectname83">
+              </div>
+              <div id="results_objectname83" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/38159/ultimate-werewolf-ultimate-edition">
+                Ultimate Werewolf: Ultimate Edition
+               </a>
+               <span class="smallerfont dull">
+                (2008)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Werewolves have descended upon your village! Who will survive?
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.448
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.98
+             </td>
+             <td align="center" class="collection_bggrating">
+              4031
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_38159_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1284">
+              </a>
+              1284
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/310448/zombie-teenz-evolution">
+               <img alt="Board Game: Zombie Teenz Evolution" src="https://cf.geekdo-images.com/elS-EEtVF92Vk-YBqnJKeA__micro/img/jnDvS3H79KaTCHZ2kYf48LjrpgQ=/fit-in/64x64/filters:strip_icc()/pic5733331.png"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname84">
+              <div id="status_objectname84">
+              </div>
+              <div id="results_objectname84" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/310448/zombie-teenz-evolution">
+                Zombie Teenz Evolution
+               </a>
+               <span class="smallerfont dull">
+                (2020)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Cooperate to protect your town from Zombie Hordes. A game that evolves as you play!
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.448
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.72
+             </td>
+             <td align="center" class="collection_bggrating">
+              1538
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_310448_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1285">
+              </a>
+              1285
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/202583/rise-tribes">
+               <img alt="Board Game: Rise of Tribes" src="https://cf.geekdo-images.com/Io2NVc5Du_pgtcofPCOFyQ__micro/img/dJhAXtnsRVg3oy4dlMWadn4Dxq0=/fit-in/64x64/filters:strip_icc()/pic3588551.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname85">
+              <div id="status_objectname85">
+              </div>
+              <div id="results_objectname85" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/202583/rise-tribes">
+                Rise of Tribes
+               </a>
+               <span class="smallerfont dull">
+                (2018)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Grow your tribe and conquer the new prehistoric land with your might and wit.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.448
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.14
+             </td>
+             <td align="center" class="collection_bggrating">
+              2966
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_202583_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1286">
+              </a>
+              1286
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/359970/challengers">
+               <img alt="Board Game: Challengers!" src="https://cf.geekdo-images.com/GtLESZ4ZjqikK12bjBTmig__micro/img/AUnUNjLg-V-sOk8U1AQ3PG_k7dA=/fit-in/64x64/filters:strip_icc()/pic7040521.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname86">
+              <div id="status_objectname86">
+              </div>
+              <div id="results_objectname86" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/359970/challengers">
+                Challengers!
+               </a>
+               <span class="smallerfont dull">
+                (2022)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Capture the flag and hold onto it to win the tournament!
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.447
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.15
+             </td>
+             <td align="center" class="collection_bggrating">
+              2884
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_359970_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1287">
+              </a>
+              1287
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/10/elfenland">
+               <img alt="Board Game: Elfenland" src="https://cf.geekdo-images.com/Ea4jN5Ko5bPrXrU_AYhhzg__micro/img/EbKY3LwhkoKpjX_v5SBy38PQyUo=/fit-in/64x64/filters:strip_icc()/pic1798136.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname87">
+              <div id="status_objectname87">
+              </div>
+              <div id="results_objectname87" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/10/elfenland">
+                Elfenland
+               </a>
+               <span class="smallerfont dull">
+                (1998)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Use elf transportation (dragon, cloud, raft, unicorn...) to visit the most cities.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.447
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.68
+             </td>
+             <td align="center" class="collection_bggrating">
+              8794
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_10_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1288">
+              </a>
+              1288
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/319910/pagan-fate-roanoke">
+               <img alt="Board Game: Pagan: Fate of Roanoke" src="https://cf.geekdo-images.com/rDVo_h2DLjKIyTDGpYye-Q__micro/img/kZS4L_keib5NlazzZFUCwPMKqas=/fit-in/64x64/filters:strip_icc()/pic5697622.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname88">
+              <div id="status_objectname88">
+              </div>
+              <div id="results_objectname88" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/319910/pagan-fate-roanoke">
+                Pagan: Fate of Roanoke
+               </a>
+               <span class="smallerfont dull">
+                (2022)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Witch and Hunter duel for the fate of Roanoke in an asymmetrical deduction card game.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.447
+             </td>
+             <td align="center" class="collection_bggrating">
+              8.11
+             </td>
+             <td align="center" class="collection_bggrating">
+              1201
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_319910_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1289">
+              </a>
+              1289
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/301257/maglev-metro">
+               <img alt="Board Game: Maglev Metro" src="https://cf.geekdo-images.com/yCj3DQLmxwdSCjXlt-styQ__micro/img/NJMpmqxmmW1oCHhDTrXi0cSjj0o=/fit-in/64x64/filters:strip_icc()/pic5275652.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname89">
+              <div id="status_objectname89">
+              </div>
+              <div id="results_objectname89" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/301257/maglev-metro">
+                Maglev Metro
+               </a>
+               <span class="smallerfont dull">
+                (2021)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Efficiency is the key to rebuilding the city transit with maglev tech.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.447
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.28
+             </td>
+             <td align="center" class="collection_bggrating">
+              2294
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_301257_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1290">
+              </a>
+              1290
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/302388/back-future-back-time">
+               <img alt="Board Game: Back to the Future: Back in Time" src="https://cf.geekdo-images.com/wjJsquLxPJc2WmvJ7SqVbQ__micro/img/fgvIr8fni5qX7KLFc-8vYnYarOQ=/fit-in/64x64/filters:strip_icc()/pic5240569.png"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname90">
+              <div id="status_objectname90">
+              </div>
+              <div id="results_objectname90" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/302388/back-future-back-time">
+                Back to the Future: Back in Time
+               </a>
+               <span class="smallerfont dull">
+                (2020)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Reset the 1955 timeline before you disappear and lightning strikes the clock tower.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.447
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.27
+             </td>
+             <td align="center" class="collection_bggrating">
+              2550
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_302388_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr class="geekcollection_ad">
+             <td colspan="7">
+              <div class="text-center" id="dfp-inline-post_5">
+              </div>
+              <script>
+               GEEK.legacyAds.push('dfp-inline-post_5');
+              </script>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1291">
+              </a>
+              1291
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/18258/mission-red-planet">
+               <img alt="Board Game: Mission: Red Planet" src="https://cf.geekdo-images.com/AxL3w-5D1zVgKsrS9iQi2A__micro/img/TJCSoC58uH3qIyf7fYo1Wt5lubM=/fit-in/64x64/filters:strip_icc()/pic151268.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname91">
+              <div id="status_objectname91">
+              </div>
+              <div id="results_objectname91" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/18258/mission-red-planet">
+                Mission: Red Planet
+               </a>
+               <span class="smallerfont dull">
+                (2005)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Take advantage of the passengers' special abilities to colonize Mars.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.446
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.89
+             </td>
+             <td align="center" class="collection_bggrating">
+              4229
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_18258_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1292">
+              </a>
+              1292
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/25821/werewolves-millers-hollow">
+               <img alt="Board Game: The Werewolves of Miller's Hollow" src="https://cf.geekdo-images.com/rZ0tOafAt1oue_7NKqELsg__micro/img/XgbK_PzjkaSStv1AQWzyYilZiJg=/fit-in/64x64/filters:strip_icc()/pic7203269.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname92">
+              <div id="status_objectname92">
+              </div>
+              <div id="results_objectname92" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/25821/werewolves-millers-hollow">
+                The Werewolves of Miller's Hollow
+               </a>
+               <span class="smallerfont dull">
+                (2001)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Be a villager and lynch the werewolves... unless you are a werewolf yourself.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.446
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.69
+             </td>
+             <td align="center" class="collection_bggrating">
+              11380
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_25821_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1293">
+              </a>
+              1293
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/191876/ulm">
+               <img alt="Board Game: Ulm" src="https://cf.geekdo-images.com/geu4jwp2Zskpb4qjbBA1Nw__micro/img/1dHe2PYLa1qnNSf7j9kxI8MAdbg=/fit-in/64x64/filters:strip_icc()/pic3193554.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname93">
+              <div id="status_objectname93">
+              </div>
+              <div id="results_objectname93" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/191876/ulm">
+                Ulm
+               </a>
+               <span class="smallerfont dull">
+                (2016)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Use a 3x3 action grid to expand your influence in a medieval city under construction.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.445
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.02
+             </td>
+             <td align="center" class="collection_bggrating">
+              3264
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_191876_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1294">
+              </a>
+              1294
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/191597/dale-merchants-2">
+               <img alt="Board Game: Dale of Merchants 2" src="https://cf.geekdo-images.com/3W2uUAqtkK1PjPyrcNYUhA__micro/img/GhqBgb4egdnen-R8-dQ7QTQ-BEo=/fit-in/64x64/filters:strip_icc()/pic2986642.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname94">
+              <div id="status_objectname94">
+              </div>
+              <div id="results_objectname94" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/191597/dale-merchants-2">
+                Dale of Merchants 2
+               </a>
+               <span class="smallerfont dull">
+                (2016)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Learn new techniques, trade goods, and manage your stock to build the master stall!
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.445
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.30
+             </td>
+             <td align="center" class="collection_bggrating">
+              2285
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_191597_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1295">
+              </a>
+              1295
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/131014/carcassonne-winter-edition">
+               <img alt="Board Game: Carcassonne: Winter Edition" src="https://cf.geekdo-images.com/mugpWkO9Z9uuQ55e1Q3AKg__micro/img/WkknBSJ855BcyZVhKk9_wNkV2l4=/fit-in/64x64/filters:strip_icc()/pic1671067.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname95">
+              <div id="status_objectname95">
+              </div>
+              <div id="results_objectname95" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/131014/carcassonne-winter-edition">
+                Carcassonne: Winter Edition
+               </a>
+               <span class="smallerfont dull">
+                (2012)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Build your land using the tiles, except this time it is winter freezing cold.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.444
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.49
+             </td>
+             <td align="center" class="collection_bggrating">
+              1879
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_131014_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1296">
+              </a>
+              1296
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/295293/thing-boardgame">
+               <img alt="Board Game: The Thing: The Boardgame" src="https://cf.geekdo-images.com/dJCtZr6_dFDIg4o8tMYqCA__micro/img/zEJrzTURk5yQUHeVjHTaXtyZ-Pw=/fit-in/64x64/filters:strip_icc()/pic5089905.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname96">
+              <div id="status_objectname96">
+              </div>
+              <div id="results_objectname96" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/295293/thing-boardgame">
+                The Thing: The Boardgame
+               </a>
+               <span class="smallerfont dull">
+                (2022)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               The official board game based on the cult movie of 1982.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.444
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.71
+             </td>
+             <td align="center" class="collection_bggrating">
+              1709
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_295293_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1297">
+              </a>
+              1297
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/134253/hostage-negotiator">
+               <img alt="Board Game: Hostage Negotiator" src="https://cf.geekdo-images.com/lsQCV11cBoOq9tms22z0gg__micro/img/HVZXs2Em70DYaf69-bW4EvaL82o=/fit-in/64x64/filters:strip_icc()/pic2043737.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname97">
+              <div id="status_objectname97">
+              </div>
+              <div id="results_objectname97" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/134253/hostage-negotiator">
+                Hostage Negotiator
+               </a>
+               <span class="smallerfont dull">
+                (2015)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Talk them down and save the hostages in this dice and card-driven solo game.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.444
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.81
+             </td>
+             <td align="center" class="collection_bggrating">
+              5630
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_134253_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1298">
+              </a>
+              1298
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/157526/viceroy">
+               <img alt="Board Game: Viceroy" src="https://cf.geekdo-images.com/24x3IUxdpizAPxXPOJsypQ__micro/img/uz4RodT5LLaEAXeUMpNuDdP_ztc=/fit-in/64x64/filters:strip_icc()/pic2254354.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname98">
+              <div id="status_objectname98">
+              </div>
+              <div id="results_objectname98" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/157526/viceroy">
+                Viceroy
+               </a>
+               <span class="smallerfont dull">
+                (2014)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Bid your gems to recruit and build your pyramid of power!
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.443
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.80
+             </td>
+             <td align="center" class="collection_bggrating">
+              5546
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_157526_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1299">
+              </a>
+              1299
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/16986/ubongo">
+               <img alt="Board Game: Ubongo" src="https://cf.geekdo-images.com/0wSuQbmk4nPwNytp9_zzPw__micro/img/FHqVT7C4hDAPdyGN69I4CM4scsM=/fit-in/64x64/filters:strip_icc()/pic4597123.jpg"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname99">
+              <div id="status_objectname99">
+              </div>
+              <div id="results_objectname99" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/16986/ubongo">
+                Ubongo
+               </a>
+               <span class="smallerfont dull">
+                (2003)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Race to fill the target shape using a set of polyominoes before your opponents do.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.443
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.69
+             </td>
+             <td align="center" class="collection_bggrating">
+              9111
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_16986_textwithprices__">
+              </div>
+             </td>
+            </tr>
+            <tr id="row_">
+             <td align="center" class="collection_rank">
+              <a name="1300">
+              </a>
+              1300
+             </td>
+             <td class="collection_thumbnail">
+              <a href="/boardgame/113873/hunters-german-u-boats-war-1939-43">
+               <img alt="Board Game: The Hunters: German U-Boats at War, 1939-43" src="https://cf.geekdo-images.com/6iCFBKMFJHLQNCPuHlsVhQ__micro/img/iZx05eSGGzbicPeRyZ7rd2fK0TQ=/fit-in/64x64/filters:strip_icc()/pic1720387.png"/>
+              </a>
+             </td>
+             <td class="collection_objectname browse" id="CEcell_objectname100">
+              <div id="status_objectname100">
+              </div>
+              <div id="results_objectname100" onclick="" style="z-index:1000;">
+               <a class="primary" href="/boardgame/113873/hunters-german-u-boats-war-1939-43">
+                The Hunters: German U-Boats at War, 1939-43
+               </a>
+               <span class="smallerfont dull">
+                (2013)
+               </span>
+              </div>
+              <p class="smallefont dull" style="margin: 2px 0 0 0;">
+               Sub captains have just three orders: run quiet, fire at will, and survive if you can.
+              </p>
+             </td>
+             <td align="center" class="collection_bggrating">
+              6.443
+             </td>
+             <td align="center" class="collection_bggrating">
+              7.73
+             </td>
+             <td align="center" class="collection_bggrating">
+              1725
+             </td>
+             <td class="collection_shop">
+              <div class="aad" id="aad_thing_113873_textwithprices__">
+              </div>
+             </td>
+            </tr>
+           </table>
+          </div>
+         </div>
+         <p align="right">
+          <a href="/browse/boardgame/page/1" target="_self" title="first page">
+           [1]
+          </a>
+          <a href="/browse/boardgame/page/12" target="_self" title="previous page">
+           <b>
+            Prev «
+           </b>
+          </a>
+          <a href="/browse/boardgame/page/11" target="_self" title="page 11">
+           11
+          </a>
+          ,
+          <a href="/browse/boardgame/page/12" target="_self" title="page 12">
+           12
+          </a>
+          ,
+          <b>
+           13
+          </b>
+          ,
+          <a href="/browse/boardgame/page/14" target="_self" title="page 14">
+           14
+          </a>
+          ,
+          <a href="/browse/boardgame/page/15" target="_self" title="page 15">
+           15
+          </a>
+          <a href="/browse/boardgame/page/14" target="_self" title="next page">
+           <b>
+            Next »
+           </b>
+          </a>
+          <a href="/browse/boardgame/page/1479" target="_self" title="last page">
+           [1479]
+          </a>
+         </p>
+         <div id="legacy_modal">
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="global-body-content-secondary">
+      </div>
+     </div>
+    </div>
+   </main>
+   <geekoutput-footer>
+   </geekoutput-footer>
+  </div>
+ </body>
+</html>
