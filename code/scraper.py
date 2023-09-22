@@ -12,7 +12,7 @@ for i in range(1, 251):
     if response.status_code == 200:
         # Parse the HTML content using BeautifulSoup
         soup = BeautifulSoup(response.text, "html.parser")
-        filename = "../html/" + str(i) + ".html"
+        filename = "html/rank_pages/" + str(i) + ".html"
         with open(filename, "w", encoding="utf-8") as f:
             # Write the HTML content to the file
             f.write(soup.prettify())

@@ -5,7 +5,7 @@ import os
 # Read HTML file
 html_content = ''
 for i in range(1, 251):
-    with open("./html/" + str(i) + ".html", 'r', encoding='utf-8') as file:
+    with open("html/rank_pages/" + str(i) + ".html", 'r', encoding='utf-8') as file:
         html_content += file.read()
 soup = BeautifulSoup(html_content, 'html.parser')
 
