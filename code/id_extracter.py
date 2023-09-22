@@ -1,23 +1,25 @@
 from bs4 import BeautifulSoup
 import re
+import os
 
 # Read HTML file
-with open("./mini_project/html/1.html", 'r', encoding='utf-8') as file:
-    html_content = file.read()
+html_content = ''
+for i in range(1, 251):
+    with open("./html/" + str(i) + ".html", 'r', encoding='utf-8') as file:
+        html_content += file.read()
 soup = BeautifulSoup(html_content, 'html.parser')
 
-# 使用CSS选择器提取所有符合条件的<a>元素
-# 这里使用[href^="/boardgame/"]表示选择所有href属性以/boardgame/开头的<a>元素
-# 这样你可以获取所有这种格式的链接
-target_links = soup.select('a[href^="/boardgame/"]')
+# Use CSS selector to extract all elements satisfying the requirement
+links = soup.select('a[href^="/boardgame/"]')
+id_set = set()
 
-# 遍历提取到的链接并打印它们的href属性
+for link in links:
+    href = link.get('href')
+    id_match = re.search(r'/boardgame/(\d+)/', href)
+    if id_match:
+        id_set.add(id_match.group(1))
 
-with open("./mini_project/id_list/1.txt", 'w', encoding='utf-8') as out:
-    for link in target_links:
-        href = link.get('href')
-        id_match = re.search(r'/boardgame/(\d+)/', href)
-        if id_match:
-            game_id = id_match.group(1)
-            # 写入ID部分到文件，每个ID占一行
-            out.write(game_id + '\n')
+# Write ids into file id.txt'
+with open(os.path.join(os.getcwd(), 'data/id.txt'), 'w') as f:
+    for id in id_set:
+        f.write(id + '\n')
