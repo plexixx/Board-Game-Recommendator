@@ -29,10 +29,10 @@ for id in id_list:
     else:
         price = -1
     dict_list.append({'id':id, 'price':price})
-    filename = "html/item_pages/" + str(id) + ".html"
-    with open(filename, "w", encoding="utf-8") as f:
-        f.write(soup.prettify())
-    print(f"HTML content saved to {filename}")
+    # filename = "html/item_pages/" + str(id) + ".html"
+    # with open(filename, "w", encoding="utf-8") as f:
+    #     f.write(soup.prettify())
+    # print(f"HTML content saved to {filename}")
 
 df = pd.DataFrame(dict_list)
 df.to_csv('data/price.csv', index=False)
