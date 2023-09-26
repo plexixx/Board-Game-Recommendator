@@ -34,6 +34,7 @@ for id in id_list:
         else:
             rate_num = -1
         rate_dict[i] = rate_num
+        print(f"id:{id}, rating:{i}")
     df_dict[id] = rate_dict
 
 df = pd.DataFrame(df_dict).T
