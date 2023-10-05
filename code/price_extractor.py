@@ -19,20 +19,16 @@ for id in id_list:
     url = "https://boardgamegeek.com/boardgame/" + str(id)
     time.sleep(2)
     driver.get(url)
-    time.sleep(3)
+    time.sleep(2)
     html = driver.page_source
     soup = BeautifulSoup(html, "html.parser")
-    amazon_scope = soup.find("li", class_="summary-item summary-sale-item ng-scope",\
-                      attrs={"ng-if": "::storesitemsctrl.amazon_ads.url"})
-    if amazon_scope != None:
-        price = amazon_scope.find("strong", class_="ng-binding").get_text(strip=True)
-    else:
-        price = -1
-    dict_list.append({'id':id, 'price':price})
-    # filename = "html/item_pages/" + str(id) + ".html"
-    # with open(filename, "w", encoding="utf-8") as f:
-    #     f.write(soup.prettify())
-    # print(f"HTML content saved to {filename}")
+
+    ads = [ad for ad in soup.find_all("li", class_="summary-item summary-sale-item ng-scope")\
+        if ad.get("ng-if") is not None or "ad" in ad.get("ng-repeat")]
+    store_names = [ad.find('div', class_='summary-item-title bottom ng-binding').get_text(strip=True) for ad in ads]
+    prices = [ad.find("strong", class_="ng-binding").get_text(strip=True) for ad in ads]
+    dict_list.append(dict(zip(store_names, prices)))
+    print(f"Current id: {id}")
 
 df = pd.DataFrame(dict_list)
-df.to_csv('data/price.csv', index=False)
+df.to_csv('data/prices.csv', index=False)
