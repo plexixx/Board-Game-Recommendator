@@ -38,6 +38,7 @@
 
 ## Todo
 
-- [ ] Find the changes in popular categories and mechanics over the years.
-- [ ] Apply NLP methods to descriptions/categories/mechanisms to find their relations with rating/score.
+- Find the changes in popular categories and mechanics over the years.
+- Apply NLP methods to descriptions/categories/mechanisms to find their relations with rating/score.
+- Find the relation between categories/mechanics and weight.
 
